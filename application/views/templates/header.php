@@ -1,16 +1,28 @@
 
+<!DOCTYPE html>
 <html>
 <head>
-	<title><?php echo $title ?>KarKar: Karaoke Finder</title>
+    <title><?php echo $title ?> - Scoopda</title>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/css/style.css">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-    <?php asset_url('css/style.css') ?>
-
-    <link href="ratings.html">
+     <link rel="stylesheet" href="/css/"<?php echo $title ?>".css">
+   
 </head>
+
 <body>
 	<div id="site-header">
         <img src="/images/karkar-logo-white-small.png" alt="KarKar">  
     </div>
-    
+
+    <div id="header-menu" class="header-menu"> 
+<!--		<ul>
+		<li><a id="header-menu-first-item" href="#">Boston</a></li> 
+		<li></li>
+		</ul>
+-->
+		<p>Sign up for Beta updates</p>
+    </div>
+
+<div class="main-container">
+

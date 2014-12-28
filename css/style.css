@@ -1,140 +1,252 @@
-a:-webkit-any-link {
-color: -webkit-link;
-text-decoration: none;
-cursor: auto;
-}
-
 body {
     font-family: 'Open Sans', sans-serif;
-    margin:0;
-    padding:0;
+    margin:0px;
+    padding:0px;
+    color: #364142;
+    background-color: #F6F6F6;
 }
-
 h2 {
-
-    padding-bottom: 20px;
-
     margin: 0px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-}
-
-h4 {
-    color:#B31A14;
-    font-size: 24px;
-    margin-bottom: 5px;
 }
 
 li, a {
     list-style-type: none;
+    text-decoration: none;
 }
+/* Header Styling */ 
 
-
-
+/* Header Image */
 #site-header img {
-    position: relative;
-    left: 40%;
-    top: -20px;
-
+    margin-top: -20px;
+    margin-left: 200px;
+    margin-right:auto;
 }
 
 #site-header {
-    background-color: white;
     padding-bottom: 30px;
     width: 100%;
     height: 80px;
-    background: -webkit-linear-gradient(#6BD1D6, #6ED7DB); /* For Safari 5.1 to 6.0 */
-    background: -o-linear-gradient(#6BD1D6, #6ED7DB); /* For Opera 11.1 to 12.0 */
-    background: -moz-linear-gradient(#6BD1D6, #6ED7DB); /* For Firefox 3.6 to 15 */
-    background: linear-gradient(#6BD1D6, #6ED7DB); /* Standard syntax */
-
+    background-color: #6ED7DB; 
 }
 
-#location {
-
-    color:gray;
-    margin: 0;
+/* Menu bar */
+.header-menu {
+    background-color: #364142;
+    width: 100%;
+    display: inline-block;
+    box-shadow: 1px 1px 1px #888888;
 }
 
-
-.greeting {
-    text-shadow: 1px 1px 3px rgba(255,255,255, .5);
+#header-menu ul {
+    margin-top: 0px;
     text-align: center;
-    height: 1px;
-    background-color: black;
+    list-style-type: none;
+    margin-left: 180px;
+}
+
+#header-menu a {
+    float: left;
+    width: 6em;
+    text-decoration: none;
     color: white;
+    padding: 0.2em 0.6em;
+    border-right: 1px solid white;
 }
 
+#header-menu p {
+color: white;
+margin: 0px auto 0px auto;
 
-#menu-list{
-    padding-top: 20px;
-    padding-bottom: 20px;
-    padding-left: 50px;
-    border-bottom: 1px solid #CCC;
+display: block;
+width: 60%;
+padding: 0.2em 0.6em;
+
 }
 
+#header-menu a:hover {
+    background-color: fuchsia;
+}
 
-.left-menu-container {
-    position:absolute;
-    left:0px;
-    width:200px;
-    height: 500px;
-    background-color: white;
-    border-right: 1px solid #CCC;
-    -moz-box-shadow: 1px 1px 1px #888;
-    -webkit-box-shadow: 1px 1px 1px #888;
-    box-shadow: 1px 1px 1px #888;
-    background-color: #D7E5E8;
-    margin: 0px;
+#header-menu-first-item {
+    border-left: 1px solid white;
+
+}
+/* End of Header Header Styling */ 
+/* Main content styling */ 
+
+#city {
+    padding-left:40px;
+    margin-top: 16px;
+    margin-bottom: -50px;
+    font-size: 25px;
+    color: ;
 }
 
 .main-container {
-    position:absolute;
-    width: 80%;
-    left:220px;
-    margin: 0px 10px 10px 0px;
-    padding: 20px 20px 20px 20px;
+    padding: 20px;
     background-color: white;
+    width: 1040px;
+
+    margin-right: auto;
+    margin-left: auto;
 }
 
-.events {
+/* Style of events list */
+
+#mid-container {
     text-decoration: none;
+    padding: 0px;
+    margin: 0px;
+    clear: both;
+}
+
+#mid-container ol {
+padding: 20px;
+width: 619px;
+border-right:1px solid #EBEBEB;
+float: left;
+}
+
+#mid-container li {
+    background-color:white;
+    display: block;
+}
+
+.event_content {
+    padding-top: 20px; 
+    margin: 0px 0px 20px 0px;
+    border-bottom: 1px solid #CCC;
+    width: 100%;
+}
+
+.box {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 20px;
+    width: 55%;
+    border-left: 1px solid #EBEBEB;
+    padding-left: 10px;
+}
+
+.location_image {
+        float: left;
+        width: 100px;
+}
+
+.event_content img {
+        margin-left: auto;
+        margin-right: auto;
+        width: 100px;
+}
+
+.time {
+    display: inline-block;
+    float: left;
+    margin: 0px 40px;
+    font-size: 20px;
+    width: 9%;
+}
+
+.break {
+    height: 10px;
+    clear: both;
+}
+
+.location_name {
+    font-size: 17px;
+    font-weight: 400;
+    text-decoration: none;
+    padding:0px;
+    margin-top: 0px;
+    margin-bottom: 3px;
+}
+
+.description {
+    margin-top: 3px;
+}
+
+
+.location a {
+    font-weight: 300;
+    color: #999;
+}
+
+.event_location a:visited {
+    position: relative;
+    top: 7px;
+    left: 20px;
+}
+/*
+.schedule {
+padding:0px;
+}
+
+.schedule li {
+    list-style-type: none;
+    text-align: center;
+    padding: 5px 10px;
+    float: left;
     border: 1px solid #CCC;
 }
 
-.events li {
+
+.schedule li:hover {
+    background-color: fuchsia;
+    display: block;
+}
+
+/*Contact container styling */
+
+#contact-container {
+    background-color:white;
+    padding:20px;
+    margin-top: 15px;
     border-bottom: 1px solid #CCC;
-    padding: 30px;
-    height: 200px;
-}
-#box {
-    display: inline-block;
-    vertical-align: top;
-    margin-left: 50px;
-}
-#event_content {
-        clear: both;
+    margin-left: 10px;
+    width: 320px;
+    display: initial;
+    float: left;
 }
 
-#event_content img {
-        float: left;
+#contact-container h5 {
+    font-size: 18px;
+    line-height: 2px;
+    color:#FF4322;
+}
+
+#contact-button {
+    border-radius: 5px;
+    padding:5px;
+    background-color: #66F251;
+    border: 1px solid #666;
+    color:#000;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    display: block;
+    box-shadow: 1px 1px 1px #888888;
+    background: -webkit-linear-gradient(#5AD648, #47A838); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(#5AD648, #47A838); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(#5AD648, #47A838); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(#5AD648, #47A838); /* Standard syntax (must be last)*/
+    color: white;
+    font-style: bold;
+    font-size: 16px;
+}
+
+footer {
+    clear:both;
+    padding: 0px;
+    margin-top: 20px;
+    width: 100%;
+    height: 100%;
+    background-color: #E8DED7;
+    text-align: center;
+    line-height: 30px;
 }
 
 
-.event_name a {
-    text-decoration: none;
-    color: #144AB3;
-    vertical-align: top;
-    font-size: 24px;
-}
-
-
-.directory {
-list-style-type: none;
-color: red;
-
-}
-
+/*
 .rate_widget {
     border:     1px solid #CCC;
     overflow:   visible;
@@ -161,7 +273,7 @@ color: red;
     background: url('../images/star-highlight.png') no-repeat;
 }
 
-.total_votes {
+ .total_votes {
     background-image: #eaeaea;
     top: 58px;
     left: 0;
@@ -173,8 +285,21 @@ color: red;
     margin: 0 auto 40px auto;
     width: 180px;
 }
+*/
 
-footer {
-    width: 100%;
+#page-end {
+    display: block;
+    clear: both;
     background-color: green;
+    margin: 0px;
+    padding: 0px;
+}
+
+.expandable {
+    color: #999;
+    letter-spacing:2px;
+}
+
+.content {
+    display: 
 }

@@ -1,9 +1,20 @@
+        <div id="page-end">  </div>
+</div>
 
 <footer>
-<strong>&copy; 2014</strong>
 
-    <ul class="directory"> <a href= "html/about"> About </a> </ul>
-    <ul class="directory"> <a href= "html/about"> Contact </a> </ul>
+<ul>
+	<li class="directory"> KarKar <strong>&copy; <?php echo date("Y")?> </strong> </li>
+    <li class="directory"> <a href= "./about"> About </a> </li>
+    <li class="directory"> <a href= "./about"> Contact </a> </li>
+</ul>
+</footer>
+
+
+    <script src="/js/libs/jquery.min.js"></script>
+    <script src="/js/expander.js"></script>
+    <script src="/js/ratings.js"></script>
+    <script src="/js/script.js"></script>
+
 </body>
 </html>
-</footer>
