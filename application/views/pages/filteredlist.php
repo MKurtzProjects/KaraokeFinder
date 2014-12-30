@@ -14,17 +14,20 @@
     
     <div id="mid-container"> 
         <ol>
+
+
+
             <?php 
+            $query1 = $this->db->query("SELECT * FROM event_info WHERE event_type = '".$event_type."'"); 
+
             $start_times = array();
-            foreach ($event_info as $event_item) {
-                $start_times[] = $event_item['start_time'];
+
+            foreach ($query1->result() as $row) {
+            $start_times[] = $row->start_time;
             }
-            array_multisort($start_times, SORT_ASC, $event_info); 
 
+            array_multisort($start_times, SORT_ASC); 
             ?>
-
-            <?php 
-            $query1 = $this->db->query("SELECT * FROM event_info WHERE city = 'boston'"); ?>
             
             <?php foreach ($query1->result() as $row): ?>
 
@@ -80,10 +83,10 @@
         </form>
         </div>  
     </div>
-
-
-  <ul>
-<h4> Find Events In Your City </h4>
+  
+<h4> 
+ <ul>
+    Join Events in Your City
 
   <li class="event_filters" id="button-karaoke">
         <img src="/images/karaoke_nights.png" alt="Karaoke">

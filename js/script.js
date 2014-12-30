@@ -34,12 +34,23 @@ $('#form-container').submit(loadData);
 
     $( document ).ready(function () {
       // set an on click on the button
-      $("#button").click(function () {
-        // get the time if clicked via an ajax get queury
+      $("#button-karaoke").click(function () {
+        // get the city if clicked via an ajax get queury
         // see the code in the controller city.php
         $.get("/index.php/city", function (city) {
           // update the textarea with the time
-          $("#text").html("Time on the server is:" + city);
+          $("body").html(city);
+        });
+      });
+
+
+
+        $("#button-trivia").click(function () {
+      // get the city if clicked via an ajax get queury
+        // see the code in the controller city.php
+        $.get("/index.php/triviafilter", function (city) {
+          // update the textarea with the time
+          $("body").html(city);
         });
       });
     });

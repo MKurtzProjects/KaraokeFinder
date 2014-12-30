@@ -114,7 +114,7 @@ float: left;
 
 .event_content {
     padding-top: 20px; 
-    margin: 0px 0px 20px 0px;
+    margin: 0px 0px 0px 0px;
     border-bottom: 1px solid #CCC;
     width: 100%;
 }
@@ -122,9 +122,7 @@ float: left;
 .box {
     display: inline-block;
     vertical-align: top;
-    margin-left: 20px;
-    width: 55%;
-    border-left: 1px solid #EBEBEB;
+    width: 60%;
     padding-left: 10px;
 }
 
@@ -136,15 +134,15 @@ float: left;
 .event_content img {
         margin-left: auto;
         margin-right: auto;
-        width: 100px;
+        width: 90px;
 }
 
 .time {
     display: inline-block;
     float: left;
-    margin: 0px 40px;
+    margin: 0px 35px;
     font-size: 20px;
-    width: 9%;
+    width: 8%;
 }
 
 .break {
@@ -303,3 +301,13 @@ footer {
 .content {
     display: 
 }
+
+
+.event_filters  img {
+    height: 90px;
+}
+
+.event_filters  img:hover {
+    background-color: fuchsia;
+}
+

@@ -12,7 +12,7 @@ public function __construct()
 
 
 
-  public function index($page = 'filteredlist')
+  public function index($page = 'home')
   {
   	$data['event_type']= 'karaoke';
 	$data['title'] = ucfirst($page); // Capitalize the first letter
