@@ -12,11 +12,24 @@ public function __construct()
 
   public function index($page = 'filteredlist')
   {
+    if($this->session->userdata('logged_in'))
+    {
+      $session_data = $this->session->userdata('logged_in');
+      $data['username'] = $session_data['username'];
+     
+
   	$data['event_type']= 'Trivia';
 	$data['title'] = ucfirst($page); // Capitalize the first letter
 	$this->load->view('templates/header', $data);
 	$this->load->view('./pages/filteredlist');		
 	$this->load->view('templates/footer', $data);
+
+    }
+    else
+    {
+      //If no session, redirect to login page
+      redirect('login', 'refresh');
+	}
 
   } 
 }

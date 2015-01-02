@@ -1,6 +1,6 @@
 <?php
 // main ajax back end
-class City extends CI_Controller {
+class Sundayfilter extends CI_Controller {
   // just returns time
   
 public function __construct()
@@ -10,11 +10,9 @@ public function __construct()
 
 	}
 
-
-
-  public function index($page = 'home')
+  public function index($page = 'filteredlist')
   {
-  	$data['event_type']= 'karaoke';
+  	$data['start_time']= 'i don't know how to do this;
 	$data['title'] = ucfirst($page); // Capitalize the first letter
 	$this->load->view('templates/header', $data);
 	$this->load->view('./pages/filteredlist');		

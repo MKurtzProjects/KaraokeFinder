@@ -1,13 +1,15 @@
         <div id="page-end">  </div>
 </div>
-
+</div>
+</div> 
 <footer>
 
 <ul>
-	<li class="directory"> KarKar <strong>&copy; <?php echo date("Y")?> </strong> </li>
+	<li class="directory"> Scoopda <strong>&copy; <?php echo date("Y")?> </strong> </li>
     <li class="directory"> <a href= "./about"> About </a> </li>
     <li class="directory"> <a href= "./about"> Contact </a> </li>
 </ul>
+
 </footer>
 
 

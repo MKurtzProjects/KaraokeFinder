@@ -37,7 +37,7 @@
 |
 */
 
-$autoload['packages'] = array();
+$autoload['packages'] = array(APPPATH.'third_party');
 
 
 /*
@@ -52,7 +52,7 @@ $autoload['packages'] = array();
 |	$autoload['libraries'] = array('database', 'session', 'xmlrpc');
 */
 
-$autoload['libraries'] = array();
+$autoload['libraries'] = array('database','session');
 
 
 /*
@@ -64,7 +64,7 @@ $autoload['libraries'] = array();
 |	$autoload['helper'] = array('url', 'file');
 */
 
-$autoload['helper'] = array();
+$autoload['helper'] = array('url');
 
 
 /*
@@ -111,12 +111,6 @@ $autoload['language'] = array();
 
 $autoload['model'] = array();
 
-// autoloads asset_url() throughout code.  Full path returned here application/helpers/utility_helper.ph.  Assets in assest folder.
-
-$autoload['helper'] = array('url','utility');
-
-
 
 /* End of file autoload.php */
 /* Location: ./application/config/autoload.php */
-

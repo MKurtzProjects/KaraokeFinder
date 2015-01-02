@@ -1,22 +1,11 @@
         <h4 id="city" class="city">Boston</h4>       
             
 <!--
-            <ul class="schedule">
-                <li class="schedule-list"><a>SUN</a></li>
-                <li class="schedule-list"><a>MON</a></li>
-                <li class="schedule-list"><a>TUE</a></li>
-                <li class="schedule-list"><a>WED</a></li>
-                <li class="schedule-list"><a>THU</a></li>
-                <li class="schedule-list"><a>FRI</a></li>
-                <li class="schedule-list"><a>SAT</a></li>
-            </ul>
+
 -->
     
     <div id="mid-container"> 
         <ol>
-
-
-
             <?php 
             $query1 = $this->db->query("SELECT * FROM event_info WHERE event_type = '".$event_type."'"); 
 
@@ -33,7 +22,7 @@
 
                     <li class="event_content"> 
                         <div class="box">
-                            <h3 class = "location_name"><a href=<?php echo $row->website_url; ?> > <?php echo $row->event_type; ?>  at <?php echo $row->location_name; ?> </a></h3>
+                            <h3 class = "location_name"><a href=<?php echo $row->website_url; ?> >  <?php echo $row->event_type; ?> <span class="at_emphasis"> at </span>  <?php echo $row->location_name; ?> </a></h3>
                             <div class="location">
                                 <a href= <?php echo "'https://www.google.com/maps/place/".$row->street.",".$row->city."'" ?> > <?php echo $row->street.", ".$row->city  ?> </a>
                             </div>
@@ -71,27 +60,33 @@
         </ol>
 
 
-
-        <div id="contact-container">
-            <h5> Get In Touch </h5>
-            <p> Would you like to add an event?</p> Do you spot incorrect information?</p> <p> Connect with the Scoopda team. We'd love to hear from you! </p>
         
-        <form action="mailto:michaelkurtz10@gmail.com?Subject=Contact%20CityHive">
-                <button type="submit" id="contact-button">
-                    Contact 
-                </button>
-        </form>
+
+
+        <div id = "menu_section">
+            <div id = "filter_menu">
+            <h3> Find an Activity </h3>
+            <ul   id="day_filter"> <h4> By Day: </h4>
+                <li>
+                    <span> Coming Soon! </span>
+                </li>
+            </ul>
+            <ul> <h4> By Type: </h4>
+                  <li id="button-karaoke"> <a href="#"> KARAOKE </a> </li>
+                  <li id="button-trivia"> <a href="#"> TRIVIA </a> </li>
+            </ul>
+
+
+
+
+            <div id="add_event">
+            <h5> Want to Add an Event? </h5>
+            <p> We'll help you! </p>
+            <form action="mailto:michaelkurtz10@gmail.com?Subject=Contact%20CityHive">
+                    <button type="submit" id="contact-button">
+                        Contact 
+                    </button>
+            </form>
+            </div>
         </div>  
     </div>
-  
-<h4> 
- <ul>
-    Join Events in Your City
-
-  <li class="event_filters" id="button-karaoke">
-        <img src="/images/karaoke_nights.png" alt="Karaoke">
-  </li>
-  <li class="event_filters" id="button-trivia">
-        <img src="/images/trivia_nights.png" alt="Trivia Nights">
-  </li>
-</ul>

@@ -6,8 +6,7 @@
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/css/style.css">
-     <link rel="stylesheet" href="/css/betalogin.css">
-    <link rel="stylesheet" href="/css/filteredlist.css">
+    <link rel="stylesheet" href="/css/betalogin.css">
    
 </head>
 
@@ -15,11 +14,9 @@
     <div id="site-header">
     <header>
 
-        <a href="/index.php/home"><img src="/images/scoopdalogo.png" alt="KarKar"> </a> 
+        <img src="/images/scoopdalogo.png" alt="KarKar">
     
     <div id = "user_info">
-    <p>Welcome <?php echo $username; ?>!</p>
-    <a href="home/logout">Logout</a>
     </div>
     </div>
     </header>
