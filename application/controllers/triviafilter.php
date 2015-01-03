@@ -10,8 +10,9 @@ public function __construct()
 
 	}
 
-  public function index($page = 'filteredlist')
+  public function index($page = 'Beta Login')
   {
+
     if($this->session->userdata('logged_in'))
     {
       $session_data = $this->session->userdata('logged_in');
@@ -19,7 +20,7 @@ public function __construct()
      
 
   	$data['event_type']= 'Trivia';
-	$data['title'] = ucfirst($page); // Capitalize the first letter
+
 	$this->load->view('templates/header', $data);
 	$this->load->view('./pages/filteredlist');		
 	$this->load->view('templates/footer', $data);

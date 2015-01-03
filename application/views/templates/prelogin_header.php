@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title><?php echo $title ?> - Scoopda</title>
+    <title>Beta Login - Scoopda</title>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/css/style.css">

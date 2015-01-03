@@ -19,6 +19,14 @@ h3 {
 	margin-bottom: 10px;
 }
 
+#login_section {
+	
+}
+
+#errors {
+	color: red;
+}
+
 #space {
 	height: 50px;
 }

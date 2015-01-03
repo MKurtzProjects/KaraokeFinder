@@ -100,8 +100,6 @@ margin-top: -1000px;
 }
 
 #menu_section {
-
-
     float:left;
     padding-left: 20px;
     width: 330px;
@@ -111,32 +109,37 @@ margin-top: -1000px;
 
 #filter_menu li, ul {
 list-style-type: none;
-list-style-position: inside;
-padding-left: 10px;
 margin-left: 0px;
+padding: 0px;
+margin-top: 0px;
 }
 
 
+h4 {
+    width: 80px;
+    padding: 0px;
+    margin: 0px;
+}
 
 #filter_menu li {
-	padding-bottom: 10px;
+	padding-bottom: 0px;
 	padding-top: 10px;
-	padding-left: 10px;
-
+	padding-left: 0px;
 	width: 90px;
-
 }
 
-#filter_menu ul {
-	padding-bottom: 10px;
-	padding-top: 10px;
-	border-top: 1px solid #CCC;
-	width: 90;
-
-}
 
 #day_filter {
 	float:right;
+    padding: 0px 0px 0px 30px;
+    margin: 0px 40px 0px 0px;
+    border-left: 1px solid #EBEBEB;
+}
+
+#event_filter {
+    padding: 0px;
+    margin: 0px 0px 0px 40px;
+    
 }
 
 
@@ -162,6 +165,7 @@ span {
 }
 
 #add_event {
+    margin-top: 50px;
 	border-top: 1px solid #EBEBEB;
 }
 

@@ -8,8 +8,10 @@ class VerifyLogin extends CI_Controller {
     $this->load->model('user','',TRUE);
   }
 
-  function index()
+  function index($page = 'home')
   {
+
+      $data['title'] = ucfirst($page); // Capitalize the first letter
     //This method will have the credentials validation
     $this->load->library('form_validation');
 
@@ -19,7 +21,15 @@ class VerifyLogin extends CI_Controller {
     if($this->form_validation->run() == FALSE)
     {
       //Field validation failed.  User redirected to login page
-      $this->load->view('login_view');
+  
+  $this->load->view('templates/prelogin_header');
+  $this->load->view('login_view');
+   $this->load->helper(array('form'));
+  $this->load->view('templates/footer'); 
+
+
+
+
     }
     else
     {

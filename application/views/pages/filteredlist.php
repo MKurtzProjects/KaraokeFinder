@@ -71,7 +71,7 @@
                     <span> Coming Soon! </span>
                 </li>
             </ul>
-            <ul> <h4> By Type: </h4>
+            <ul   id="event_filter"> <h4> By Type: </h4>
                   <li id="button-karaoke"> <a href="#"> KARAOKE </a> </li>
                   <li id="button-trivia"> <a href="#"> TRIVIA </a> </li>
             </ul>
