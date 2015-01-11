@@ -1,34 +1,83 @@
-<div id="mid-container"> 
+        <div id = "filter_container">
+            <div id = "filter_menu">
+            <h3> Find an Activity </h3>
+            <div   id="event_filter"> 
+                  <button type="button" class= "button-example-blue" id="button-karaoke"> Karaoke </button>
+                  <button type="button" class= "button-example-blue" id="button-trivia">  Trivia </button>
+            </div>
 
-<div  id="home_menu">
-
-<h2> Get Started </h2>
-<ul>
-  <li class="event_filters" id="button-karaoke"></a>
-        <a href="/index.php/karaoke"><img src="/images/karaoke_nights.png" alt="Karaoke">
-  </li>
-  <li class="event_filters" id="button-trivia">
-        <a href="/index.php/trivia"> <img src="/images/trivia_nights.png" alt="Trivia Nights"> </a>
-  </li>
-    <li class="event_filters" id="">
-        <img src="/images/more_events.png" alt="Trivia Nights">
-  </li>
-</ul>
-</div>
-
-        <div id="contact-container">
-            <h5> Connect with Scoopda </h5>
-            <p> Would you like to add an event?  </p>
-        
-        <form action="mailto:michaelkurtz10@gmail.com?Subject=Contact%20CityHive">
-                <button type="submit" id="contact-button">
-                    Contact 
-                </button>
-        </form>
         </div>  
+    </div>
+
+
+    <div id="events_container"> 
+        <h1>Boston</h1>                 
+        <ol>
+            <?php 
+            $query1 = $this->db->query("SELECT * FROM event_info WHERE ".$event_type); 
+
+            $start_times = array();
+
+            foreach ($query1->result() as $row) {
+            $start_times[] = $row->start_time;
+            }
+
+            array_multisort($start_times, SORT_ASC); 
+            ?>
+            
+            <?php foreach ($query1->result() as $row): ?>
+
+                    <li class="event_content"> 
+                        <div class="box">
+                            <h3 class = "location_name">
+                                
+                                <form action="eventpage" method="GET">
+                            <button class='location_button' name="event_id" type="submit" value=<?php echo "'".$row->event_id."'"; ?>><?php echo $row->event_type; ?> at  
+                            <?php echo $row->location_name; ?> </button>
+
+                            </form>   
+                             </h3>
+                            <div class="location">
+                                <a href= <?php echo "c".$row->street.",".$row->city."'" ?> > <?php echo $row->street."<br /> ".$row->city.", ".$row->state." ".$row->zip  ?> </a>
+                            </div>
+                          <div class="description">
+<!--                                  <?php // echo implode(' ', array_slice(explode(' ', $row->description), 0, 20)); ?>
+
+                            <a class="expandable" href="#">
 
 
 
+                               <?php
+    
+                                // if (str_word_count($row->description) > 20) {
+                                //  echo "[...]";}
+                                ?>
+
+
+                            </a>
+-->                            <div class="content">
+                                <?php // echo implode(' ', array_slice(explode(' ', $row->description), 20, 300)); ?>
+                            </div>
+                            </div>
+                            <div class="description"> 
+                            </div>
+                        </div>
+                        <div class='time'>
+                            <?php 
+                                    $d=strtotime($row->start_time);
+                                    echo "<p>".date("D", $d). " ".date("g:iA", $d)."</p>";
+                            ?>
+                        </div>
+                    <div class="location_image">
+                    <img src=<?php echo "'".$row->image."'"?> alt=Image>
+                    </div>
+                    <div class="break"></div>
+                    </li>
+            <?php endforeach ?>
+        </ol>
+
+</div>
+        
 
 
 

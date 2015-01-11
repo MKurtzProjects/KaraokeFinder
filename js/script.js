@@ -37,7 +37,8 @@ $('#form-container').submit(loadData);
       $("#button-karaoke").click(function () {
         // get the city if clicked via an ajax get queury
         // see the code in the controller city.php
-        $.get("/index.php/city", function (city) {
+        console.log('working');
+        $.get("/index.php/karaokefilter", function (city) {
           // update the textarea with the time
           $("body").html(city);
         });
@@ -51,6 +52,63 @@ $('#form-container').submit(loadData);
         $.get("/index.php/triviafilter", function (city) {
           // update the textarea with the time
           $("body").html(city);
+
+
+        });
+
+          $('.rate_widget').each(function(i) {
+    var widget = this;
+    var out_data = {
+        widget_id : $(widget).attr('id'),
+        fetch: 1
+    };
+    $.post(
+        'ratings.php',
+        out_data,
+        function(INFO) {
+            $(widget).data( 'fsr', INFO );
+            set_votes(widget);
+        },
+        'json'
+    );
+
+    function set_votes(widget) {
+ 
+    var avg = $(widget).data('fsr').whole_avg;
+    var votes = $(widget).data('fsr').number_votes;
+    var exact = $(widget).data('fsr').dec_avg;
+     
+    $(widget).find('.star_' + avg).prevAll().andSelf().addClass('ratings_vote');
+    $(widget).find('.star_' + avg).nextAll().removeClass('ratings_vote'); 
+    $(widget).find('.total_votes').text( votes + ' votes recorded (' + exact + ' rating)' );
+}
+
+$('.ratings_stars').bind('click', function() {
+    var star = this;
+    var widget = $(this).parent();
+     
+    var clicked_data = {
+        clicked_on : $(star).attr('class'),
+        widget_id : widget.attr('id')
+    };
+    $.post(
+        'ratings.php',
+        clicked_data,
+        function(INFO) {
+            widget.data( 'fsr', INFO );
+            set_votes(widget);
+        },
+        'json'
+    ); 
+});
         });
       });
     });
+
+//search box code
+$(function(){
+  $("#birds").autocomplete({
+    source: "/search/get_city" // path to the get_birds method
+  });
+});
+

@@ -1,0 +1,17 @@
+<?Php
+
+class Birds extends CI_Controller{
+  function index(){
+      $this->load->view('templates/header', $data);
+      $this->load->view('pages/home', $data); 
+      $this->load->view('templates/footer', $data);
+  }
+ 
+  function get_birds(){
+    $this->load->model('birds_model');
+    if (isset($_GET['term'])){
+      $q = strtolower($_GET['term']);
+      $this->birds_model->get_bird($q);
+    }
+  }
+}

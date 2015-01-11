@@ -1,0 +1,52 @@
+label {
+
+	display: inline-block;
+	width: 100px;
+	margin-bottom: 10px;
+}
+
+h1 {
+	padding-top: 0px;
+	margin-top: 0px;
+}
+
+h2 {
+	margin-bottom: 20px;
+}
+
+h3 {
+	margin-top: 50px;
+	margin-bottom: 10px;
+}
+
+#banner img {
+	width: 100%;
+}
+
+#login_section {
+	
+}
+
+#errors {
+	color: red;
+}
+
+#space {
+	height: 50px;
+}
+
+#scoopda_overview {
+	float: left;
+	width: 66%;
+	margin-left: 10px;
+	margin-right: 30px;
+}
+
+#scoopda_overview p {
+	font-size: large;
+}
+
+#scoopda_overview button {
+	width: 100px;
+	margin-top: 20px;
+}

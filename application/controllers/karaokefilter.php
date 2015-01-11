@@ -1,6 +1,6 @@
 <?php
 // main ajax back end
-class Triviafilter extends CI_Controller {
+class Karaokefilter extends CI_Controller {
   // just returns time
   
 public function __construct()
@@ -15,18 +15,16 @@ public function __construct()
 
     $data['page'] = $page;
 
-
-
     if($this->session->userdata('logged_in'))
     {
       $session_data = $this->session->userdata('logged_in');
       $data['username'] = $session_data['username'];
      
 
-  	$data['event_type']= "event_type='trivia'";
+  	$data['event_type']= "event_type='karaoke'";
 
 	$this->load->view('templates/header', $data);
-	$this->load->view('./pages/home', $data);		
+	$this->load->view('./pages/home');		
 	$this->load->view('templates/footer', $data);
 
     }
@@ -38,7 +36,3 @@ public function __construct()
 
   } 
 }
-
-
-error_reporting(E_ALL);
-ini_set('display_errors', 1);

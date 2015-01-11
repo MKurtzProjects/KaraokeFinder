@@ -1,0 +1,100 @@
+
+
+#filter_container {
+    float: left;
+    vertical-align: top;
+    width: 25%;
+    min-width: 200px;
+}
+
+
+#events_container {
+    float: left;
+    border-left: 1px solid #CCC;
+    padding-left: 3%;
+}
+
+.event_content {
+    padding-top: 20px; 
+    margin: 0px 0px 0px 0px;
+    border-bottom: 1px solid #CCC;
+
+}
+
+.location_button { 
+     width: 300px;
+     text-align: left;
+     background: none;
+     border: none;
+     color: #167ac6;
+     text-decoration: none;
+     cursor: pointer; 
+     font-size: larger;
+     margin-left: 0px;
+     padding-left: 0px;
+
+}
+
+.box {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.location_image {
+        float: left;
+        padding-right: 10px;
+}
+
+.event_content img {
+        margin-left: auto;
+        margin-right: auto;
+        width: 90px;
+}
+
+.time {
+    display: inline-block;
+    margin: 1.5em 0px 0px 0px;
+}
+
+.break {
+    height: 10px;
+    clear: both;
+}
+
+
+
+.location_name {
+    font-size: 17px;
+    font-weight: bolder;
+    text-decoration: none;
+    letter-spacing: 1px;
+    padding:0px;
+    margin-top: 0px;
+    margin-bottom: 3px;
+}
+
+/*
+.expandable {
+    color: #999;
+    letter-spacing:2px;
+}
+*/
+
+
+#event_filter button {
+display: block;
+margin-bottom: 5px;
+width: 75%;
+min-width: 100px;
+}
+
+.location a {
+    font-weight: 300;
+    color: #999;
+}
+
+#add_event {
+    margin-top: 50px;
+	border-top: 1px solid #EBEBEB;
+}
+

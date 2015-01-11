@@ -5,12 +5,12 @@
     <title>Beta Login - Scoopda</title>
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/betalogin.css">
+    <link rel="stylesheet" href="/css/masterstyle.css">
+    <link rel="stylesheet" href="/css/login_view.css">
    
 </head>
 
-<body>
+    <body>
     <div id="site-header">
     <header>
 
@@ -20,18 +20,5 @@
     </div>
     </div>
     </header>
-
-    <div id="header-menu" class="header-menu">
-
-
-
-<!--		<ul>
-		<li><a id="header-menu-first-item" href="#">Boston</a></li> 
-		<li></li>
-		</ul>
--->
-		<p>Now in Beta</p>
-    </div>
-
 <div class="main-container">
 

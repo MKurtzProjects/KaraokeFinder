@@ -13,10 +13,14 @@
 </footer>
 
 
-    <script src="/js/libs/jquery.min.js"></script>
     <script src="/js/expander.js"></script>
     <script src="/js/ratings.js"></script>
     <script src="/js/script.js"></script>
+	<script type="text/javascript" src="/js/jRating.jquery.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="/js/jquery-1.11.2.min.js"></script>         
+    <script src="/js/jquery-ui.js"></script>
+    <script src="/js/jquery-ui.min.js"></script>
 
 </body>
 </html>

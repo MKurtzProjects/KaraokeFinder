@@ -1,25 +1,24 @@
-<?php
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+session_start(); //we need to call PHP's session object to access it through CI
+class ActivityList extends CI_Controller {
 
-class About extends CI_Controller {
+  function __construct()
+  {
+    parent::__construct();
+  }
 
-public function __construct()
-	{
-		parent::__construct();
-		$this->load->model('events_model');
-	}
-
-	public function index($page = 'about')
-{
+  function index($page = 'home', $filter='trivia');
+  {
     if($this->session->userdata('logged_in'))
     {
       $session_data = $this->session->userdata('logged_in');
       $data['username'] = $session_data['username'];
-     
+      
+      $data['event_type']= $filter;
 
       $data['title'] = ucfirst($page); // Capitalize the first letter
-      $data['page'] = $page;
       $this->load->view('templates/header', $data);
-      $this->load->view('pages/about', $data); 
+      $this->load->view('pages/filteredlist', $data); 
       $this->load->view('templates/footer', $data);
     }
     else
@@ -36,4 +35,7 @@ public function __construct()
     redirect('home', 'refresh');
   }
 
-}	
+
+}
+
+?>

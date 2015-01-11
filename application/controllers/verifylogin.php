@@ -8,10 +8,9 @@ class VerifyLogin extends CI_Controller {
     $this->load->model('user','',TRUE);
   }
 
-  function index($page = 'home')
+  function index($page = 'login_view')
   {
-
-      $data['title'] = ucfirst($page); // Capitalize the first letter
+    $data['title'] = ucfirst($page); // Capitalize the first letter
     //This method will have the credentials validation
     $this->load->library('form_validation');
 

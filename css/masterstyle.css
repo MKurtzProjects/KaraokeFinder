@@ -1,0 +1,283 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin:0px;
+    padding:0px;
+    color: #364142;
+    background-color: #F6F6F6;
+}
+
+ol {
+    margin-left: 0px;
+    padding-left: 0px;
+}
+
+li, a {
+    list-style-type: none;
+    text-decoration: none;
+}
+a {
+    color: #167ac6;
+
+}
+/* Header Styling */ 
+
+/* Header Image */
+
+header {
+    width: 80%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 0px;
+}
+
+#site-header img {
+    margin-top: 0px;
+    height: 70px;
+    margin-right:auto;
+}
+
+#site-header {
+    width: 100%;
+    min-width: 200px;
+    position: fixed;
+    background-color: white; 
+    box-shadow: 1px 1px 1px #888888;
+}
+
+
+/* Menu bar */
+.header-menu {
+    background-color: #364142;
+    width: 100%;
+    display: inline-block;
+    box-shadow: 1px 1px 1px #888888;
+}
+
+#header-menu ul {
+    margin-top: 0px;
+    text-align: center;
+    list-style-type: none;
+    margin-left: 180px;
+}
+
+#header-menu a {
+    float: left;
+    width: 6em;
+    text-decoration: none;
+    color: white;
+    padding: 0.2em 0.6em;
+    border-right: 1px solid white;
+}
+
+#header-menu p {
+color: white;
+margin: 0px auto 0px auto;
+display: block;
+width: 60%;
+padding: 0.2em 0.6em;
+
+}
+
+#header-menu a:hover {
+    background-color: fuchsia;
+}
+
+#header-menu-first-item {
+    border-left: 1px solid white;
+}
+
+#user_info {
+float: right;
+padding: 0px 10px 0px 0px;
+}
+
+#user_info p{
+padding-bottom:0px;
+margin-bottom: 0px;
+color: gray;
+}
+
+/* End of Header Header Styling */ 
+/* Main content styling */ 
+
+#city {
+    padding-left:40px;
+    margin-top: 16px;
+    margin-bottom: -50px;
+    font-size: 25px;
+    color: ;
+}
+
+.main-container {
+    padding: 100px 5%;
+    background-color: white;
+    width: 66%;
+    min-width: 400px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* Style of events list */
+
+
+
+
+
+
+#home_menu h2 {
+    margin-left: 200px;
+}
+
+/*Contact container styling */
+
+#contact-container {
+    background-color:white;
+    padding:0px 20px;
+    padding-bottom: 10px;
+    margin-top: 0px;
+    margin-bottom: 100px;
+    border-bottom: 1px solid #CCC;
+    width: 320px;
+    display: initial;
+    float: left;
+}
+
+#contact-container h5 {
+    font-size: 18px;
+    line-height: 2px;
+    color:#FF4322;
+}
+
+footer {
+    clear:both;
+    padding: 0px;
+    margin-top:30px;
+    width: 1040px;
+    line-height: 30px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+footer li {
+    float: left;
+    padding: 10px;
+    font: gray;
+}
+
+
+
+
+
+
+
+#get_started {
+    padding-top: 20px;
+}
+
+#page-end {
+    display: block;
+    clear: both;
+    margin: 0px;
+    padding: 0px;
+}
+
+.event_filters ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: inline;
+}
+
+.event_filters  a {
+    display: block;
+
+}
+
+.event_filters img {
+    float: left;
+    width: 180px;
+    margin-right: 20px;
+    padding-right: 10px;
+}
+
+.event_filters  img:hover {
+    background-color: fuchsia;
+}
+
+
+    /* This first block of code sets the common style for all example 1 buttons. */
+    button {
+        -webkit-border-radius: 3px;
+        -moz-border-radius: 3px;
+        -ms-border-radius: 3px;
+        -o-border-radius: 3px;
+        border-radius: 3px;   
+        -webkit-box-shadow: none;
+        -moz-box-shadow: none;
+        box-shadow: none;
+        -webkit-transition-property: background;
+        -moz-transition-property: background;
+        -o-transition-property: background;
+        transition-property: background;
+        -webkit-transition-duration: 0.3s;
+        -moz-transition-duration: 0.3s;
+        -o-transition-duration: 0.3s;
+        transition-duration: 0.3s;
+        color: #ffffff;
+        text-shadow: none;
+        border: none;
+        height: 32px;
+        line-height: 32px;
+        padding: 0px 25.6px;
+        font-weight: 300;
+        font-size: 14px;
+        font-family: "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+        margin: 0;
+        text-decoration: none;
+        text-align: center;
+
+    }
+    
+    /* The next blocks of code are for user actions on the buttons. */
+    .button {
+        text-decoration: none;
+        color: #ffffff
+    }
+    .button:active {
+        -webkit-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.03), inset 0px -1px 1px rgba(255, 255, 255, 0.05), 0px 1px 0px #777777, 0px 3px 3px rgba(0, 0, 0, 0.03);
+        -moz-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.05), 0px 1px 0px #777777, 0px 3px 3px rgba(0, 0, 0, 0.03);
+        box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.03), inset 0px -1px 1px rgba(255, 255, 255, 0.05), 0px 1px 0px #777777, 0px 3px 3px rgba(0, 0, 0, 0.03)
+    }
+        
+    /* The next blocks of code are specific to the color. Copy the color you want. */
+    .button-example-red {
+        background: #e54028;
+    }
+    .button-example-red:hover {
+        background: #FF530D;
+    }
+    .button-example-blue {
+        background: #0971B2;
+    }
+    .button-example-blue:hover {
+        background: #0B88D6;
+    }
+    .button-example-green {
+        background: #00B233;
+    }
+    .button-example-green:hover {
+        background: #00BD36;
+    }
+    .button-example-pink {
+        background: #FF0090;
+    }
+    .button-example-pink:hover {
+        background: #FF2F90;
+    }
+    .button-example-dark-green {
+        background: #007F25;
+    }
+    .button-example-dark-green:hover {
+        background: #008F29;
+    }
+

@@ -1,7 +1,7 @@
  <body>
 
 <div id = "banner">
-<img src="/images/scoopdabanner.png" alt="Scoopda">
+<img id='banner' src="/images/scoopdabanner.png" alt="Scoopda">
 </div>
 
 
@@ -14,7 +14,7 @@
   <h3> Join the Beta </h3>
     <p> Are you a city adventurer?  Come join us!  Just email us with an introduction and what interests you in Scoopda. </p> 
 
-    <form action="mailto:Mike@scoopda.com?Subject=Contact%20CityHive">
+    <form action="mailto:Mike@scoopda.com?Subject=Contact%20Scoopda">
             <button type="submit" id="contact-button">
                 Contact 
             </button>

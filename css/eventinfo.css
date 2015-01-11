@@ -1,0 +1,23 @@
+p {
+    margin: 5px;
+    padding: 0px;
+}
+
+#event_image {
+	height: 250px;
+	float: left;
+	padding-right: 20px;
+}
+
+#info_container_box {
+	display: inline;
+}
+
+#info_container {
+	height: 250px;
+
+}
+
+#description {
+    padding-top: 50px;
+}
