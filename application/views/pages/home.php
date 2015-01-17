@@ -1,20 +1,26 @@
         <div id = "filter_container">
             <div id = "filter_menu">
-            <h3> Find an Activity </h3>
+            
             <div   id="event_filter"> 
-                  <button type="button" class= "button-example-blue" id="button-karaoke"> Karaoke </button>
-                  <button type="button" class= "button-example-blue" id="button-trivia">  Trivia </button>
+                <form action="home" method="get">
+                    <h3> Find an Activity </h3>
+                        <button type="submit" name = "day" value = "monday" class= "button-example-blue" id="button-karaoke"> Mondays </button>
+                        <button type="submit" name = "event_type" value = "trivia" class= "button-example-blue" id="button-trivia">  Tomorrow </button>         
+                </form>
             </div>
-
         </div>  
     </div>
+
+
+
 
 
     <div id="events_container"> 
         <h1>Boston</h1>                 
         <ol>
             <?php 
-            $query1 = $this->db->query("SELECT * FROM event_info WHERE ".$event_type); 
+            $query1 = $this->db->query($search_filter); 
+
 
             $start_times = array();
 
@@ -29,8 +35,7 @@
 
                     <li class="event_content"> 
                         <div class="box">
-                            <h3 class = "location_name">
-                                
+                            <h3 class = "location_name">      
                                 <form action="eventpage" method="GET">
                             <button class='location_button' name="event_id" type="submit" value=<?php echo "'".$row->event_id."'"; ?>><?php echo $row->event_type; ?> at  
                             <?php echo $row->location_name; ?> </button>
@@ -38,24 +43,10 @@
                             </form>   
                              </h3>
                             <div class="location">
-                                <a href= <?php echo "c".$row->street.",".$row->city."'" ?> > <?php echo $row->street."<br /> ".$row->city.", ".$row->state." ".$row->zip  ?> </a>
+                                <a href= <?php echo "'https://www.google.com/maps/place/".$row->street."?".$row->city."?".$row->state."'" ?> > <?php echo $row->street."<br /> ".$row->city.", ".$row->state." ".$row->zip ?> </a>
                             </div>
                           <div class="description">
-<!--                                  <?php // echo implode(' ', array_slice(explode(' ', $row->description), 0, 20)); ?>
-
-                            <a class="expandable" href="#">
-
-
-
-                               <?php
-    
-                                // if (str_word_count($row->description) > 20) {
-                                //  echo "[...]";}
-                                ?>
-
-
-                            </a>
--->                            <div class="content">
+                           <div class="content">
                                 <?php // echo implode(' ', array_slice(explode(' ', $row->description), 20, 300)); ?>
                             </div>
                             </div>

@@ -11,14 +11,17 @@
 </head>
 
     <body>
-    <div id="site-header">
-    <header>
+    <div id="site-header">    
 
-        <img src="/images/scoopdalogo.png" alt="KarKar">
-    
-    <div id = "user_info">
-    </div>
-    </div>
+        <header>
+
+
+        <img src="/images/scoopdalogo.png">
+
+
+</div>
+
+
     </header>
 <div class="main-container">
 

@@ -1,9 +1,11 @@
+/* accent color: EB007A; */
+
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Noto Sans', sans-serif;
     margin:0px;
     padding:0px;
     color: #364142;
-    background-color: #F6F6F6;
+    background-color: #FAFAFA;
 }
 
 ol {
@@ -24,21 +26,25 @@ a {
 /* Header Image */
 
 header {
-    width: 80%;
     margin-right: auto;
     margin-left: auto;
-    padding: 0px;
+    padding-left: 13%;
+    padding-right: 13%
 }
 
-#site-header img {
-    margin-top: 0px;
-    height: 70px;
+#logo {
+    margin-top: -20px;
+    min-height: 70px;
     margin-right:auto;
+    float: left;
+    margin-right: 10%;
 }
 
 #site-header {
+    padding-top: 30px;
     width: 100%;
     min-width: 200px;
+    min-height: 48px;
     position: fixed;
     background-color: white; 
     box-shadow: 1px 1px 1px #888888;
@@ -46,9 +52,10 @@ header {
 
 
 /* Menu bar */
-.header-menu {
+#header-menu {
     background-color: #364142;
-    width: 100%;
+    width: 500px;
+    min-width: 400px;
     display: inline-block;
     box-shadow: 1px 1px 1px #888888;
 }
@@ -78,22 +85,17 @@ padding: 0.2em 0.6em;
 
 }
 
-#header-menu a:hover {
-    background-color: fuchsia;
-}
-
-#header-menu-first-item {
-    border-left: 1px solid white;
-}
 
 #user_info {
 float: right;
-padding: 0px 10px 0px 0px;
+padding: 0px;
+margin: 0px;
+color: gray;
 }
 
 #user_info p{
-padding-bottom:0px;
-margin-bottom: 0px;
+padding:0px;
+margin: 0px;
 color: gray;
 }
 
@@ -163,11 +165,6 @@ footer li {
     padding: 10px;
     font: gray;
 }
-
-
-
-
-
 
 
 #get_started {
@@ -250,34 +247,72 @@ footer li {
     }
         
     /* The next blocks of code are specific to the color. Copy the color you want. */
-    .button-example-red {
-        background: #e54028;
-    }
-    .button-example-red:hover {
-        background: #FF530D;
-    }
     .button-example-blue {
-        background: #0971B2;
+        background: #00BCD4;
     }
     .button-example-blue:hover {
-        background: #0B88D6;
+        background: #4DD0E1;
     }
-    .button-example-green {
-        background: #00B233;
-    }
-    .button-example-green:hover {
-        background: #00BD36;
-    }
-    .button-example-pink {
-        background: #FF0090;
-    }
-    .button-example-pink:hover {
-        background: #FF2F90;
-    }
-    .button-example-dark-green {
-        background: #007F25;
-    }
-    .button-example-dark-green:hover {
-        background: #008F29;
-    }
+
+#submit {
+float:left;
+display: inline-block;
+}
+
+#submit:hover {
+
+}
+
+#city_select, #event_select p {
+display: inline;
+float: left;
+vertical-align: bottom;
+padding: 0px;
+margin: 0px;
+}
+
+
+#city_select {
+    color:gray;
+    margin-right: 20px;
+}
+
+.ui-combobox {
+    position: relative;
+    display: inline-block;
+}
+.ui-combobox-toggle {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin-left: -1px;
+    padding: 0;
+    /* adjust styles for IE 6/7 */
+    *height: 1.7em;
+    *top: 0.1em;
+}
+.ui-combobox-input {
+    margin: 0;
+    padding: 0.3em;
+}
+#select-gear {
+width: 20px;    
+}
+
+#submit {
+    border-radius: 0px;
+    background-color: white;
+    float: left;
+    padding: 0px;
+    margin: 0px;
+    margin-right: -3px;
+
+}
+
+#submit:hover {
+    border-right:4px solid #F8593E;
+    cursor: pointer;
+
+}
+
 

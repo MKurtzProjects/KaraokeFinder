@@ -1,14 +1,14 @@
  <body>
 
 <div id = "banner">
+
+            <h1> Scoopda - Now In Beta! </h1>
 <img id='banner' src="/images/scoopdabanner.png" alt="Scoopda">
 </div>
 
 
-
-     <div id="space"> </div>
     <div id = "scoopda_overview">
-        <h1> Welcome to Scoopda </h1>
+        <h2> Welcome to Scoopda </h2>
         <p> Scoopda helps you discover the best activities in town - from the craziest karaoke to the tastiest Brunch spot - any day of the week.  </p>
 
   <h3> Join the Beta </h3>

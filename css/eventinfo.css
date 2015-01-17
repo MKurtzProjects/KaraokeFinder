@@ -1,23 +1,83 @@
-p {
-    margin: 5px;
-    padding: 0px;
+h1 {
+	text-align: center;
+	padding: 40px;
+	margin: 0px;
+	color: white;
+
 }
+
+h2 {
+	color: #00838F;
+	margin: 0px;
+}
+
+h3 {
+	color: gray;
+}
+
+#clear_header {
+	clear: both;
+	padding-bottom: 5%;
+	background-color:white;
+	min-width: 433px;
+
+}
+
+#event_heading { 
+	clear:both;
+background-color: #00838F;
+	min-width: 433px;
+
+}
+
 
 #event_image {
-	height: 250px;
+	width: 200px;
+	z-index: -1;
+}
+
+#header_info {
+clear: both;
+display: block;
+}
+
+#image_box {
 	float: left;
-	padding-right: 20px;
+	width: 200px;
+	height:200px;
+	overflow: hidden;
 }
 
-#info_container_box {
-	display: inline;
+#map_info {
+	clear: both;
+	display: block;
+	color: gray;
 }
 
-#info_container {
-	height: 250px;
-
+#map_info p {
+	margin: 0px;
+	padding: 0px;
+	color: gray;
+	clear: both;
 }
+
+#maps {
+	display: block;
+	float: left;
+	margin-right: 20%;
+	padding: 16px;
+    border: 1px solid #CCC;
+    margin-bottom: 20px;
+
+
+
+.clear {
+clear: both;
+display: block;
+height: 1px;
+}
+
 
 #description {
-    padding-top: 50px;
 }
+

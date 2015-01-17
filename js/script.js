@@ -105,10 +105,5 @@ $('.ratings_stars').bind('click', function() {
       });
     });
 
-//search box code
-$(function(){
-  $("#birds").autocomplete({
-    source: "/search/get_city" // path to the get_birds method
-  });
-});
+
 

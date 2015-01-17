@@ -10,34 +10,18 @@ class Home extends CI_Controller {
 
   function index($page = 'home')
   { 
+    $word = "SELECT * FROM event_info WHERE event_type='karaoke' OR event_type='trivia'";
 
-    if (isset($_GET['city'])){
-    $city = $_GET["city"];
-    $search_query = $this->db->query("SELECT * FROM event_info WHERE city = '".$city."'");
-
-    if ($search_query->num_rows() == 0) {
-      die ("That event could not be found!");
-    }
-    else {
-        $row = $search_query->row_array(); 
-        $data['event_type'] = $row['event_type'];
-        $data['location_name'] = $row['location_name'];   
-        $data['street'] = $row['street'];   
-        $data['city'] = $row['city'];
-        $data['state'] = $row['state'];
-        $data['zip'] = $row['zip'];
-        $data['website_url'] = $row['website_url'];        
-        $data['description'] = $row['description'];
-        $data['image'] = $row['image'];
-        $data['start_time'] = $row['start_time'];
-        $data['telephone'] = $row['telephone'];          
-    }
+ if (isset($_GET['select'])){
+    $select = $_GET["select"];
+    $word = "SELECT * FROM event_info WHERE event_type LIKE '%".$select."%' OR location_name LIKE '%".$select."%'";
+ }
 
 
-  }
+    $data['search_filter'] = $word;
 
 
-    $data['event_type']= "event_type='karaoke' OR event_type='trivia'";
+    
     if($this->session->userdata('logged_in'))
     {
       $session_data = $this->session->userdata('logged_in');
@@ -68,4 +52,6 @@ class Home extends CI_Controller {
 
 }
 
-?>
+function event_type_filter(){
+
+}

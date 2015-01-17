@@ -1,14 +1,24 @@
-<h1> <?php echo $event_type ?> & <?php echo $location_name ?> </h1>
 
-<div class="exemple">
+
+
+<div id="event_heading">
+<div id="image_box">
+<img id="event_image" src=<?php echo "'".$image."'" ?>>
+</div>
+
+<h1> <?php echo $event_type ?> at <?php echo $location_name ?> </h1>
+
+
+   <!-- <div class="exemple">
  
-   <!-- in this exemple, 12 is the average and 1 is the id of the line to update in DB -->
-   <div class="basic" data-average="12" data-id="1"></div>
+in this exemple, 12 is the average and 1 is the id of the line to update in DB -->
+   <!--   <div class="basic" data-average="12" data-id="1"></div>
  
     <!-- in this other exemple, 8 is the average and 2 is the id of the line to update in DB 
    <div class="basic" data-average="8" data-id="2"></div>-->
  
-</div>
+  <!-- </div> 
+-->
 
 
 <script type="text/javascript">
@@ -41,38 +51,37 @@ $(document).ready(function(){
 </script>
 
 
-<h2> 9:00pm Tuesday - 1:00am Wednesday </h2>
-
-<hr/>
-
+<div id="clear_header"> </div>
+</div>
 
 
+<div id = "header_info">
 
 
 
-<div id="info_container">
 
-<img id="event_image" src=<?php echo "'".$image."'" ?> </div>
-<div id="info_container_box">
+<div id= "map_info">
 
 
-<a class="location" href="'https://www.google.com/maps/place/'">  </a> <a href= <?php echo $street."?".$city."?".$state ?> >  <?php echo $street."<br />".$city.", ".$state." ".$zip  ?> </a>
-<p><?php echo $telephone ?></p>
-<a href=<?php echo "'".$website_url."'" ?>> Visit </a>
 
+<div id="maps">
+<a href= <?php echo "'https://www.google.com/maps/dir/".$street.",+".$city.",+".$state."'"?>> <img src= <?php echo "'http://maps.googleapis.com/maps/api/staticmap?center=".$street.",+".$city.",+".$state."zoom=17&size=400x200&maptype=roadmap&format=png&visual_refresh=true&markers=size:mid%7Ccolor:red%7Clabel:%7C".$street.",+".$city.",+".$state."'" ?> >                     
+
+
+<p> <?php echo $street."<br />".$city.", ".$state." ".$zip  ?> </p>
+<p><?php echo $telephone ?>
+</p>
+
+
+<a href=<?php echo "'".$website_url."'" ?>> View Website</a>
+</div>
+
+  <div id= "schedule">
+<h2> Schedule </h2>
+<h3>  Wednesdays at 9 PM </h3>
 </div>
 </div>
 
-<hr/>
-
-
-<!-- appends google maps image -->
-<script>
-var search = "Boston, MA"
-var streetviewUrl = 'https://maps.googleapis.com/maps/api/streetview?size=600x400&location=' + search + '';
-console.log(streetviewUrl);
-$("#location_map").append('<img class="img" src="' + streetviewUrl + '">');
-</script>
 
 
 <!-- comment count -->
@@ -102,3 +111,5 @@ $("#location_map").append('<img class="img" src="' + streetviewUrl + '">');
             (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
         })();
     </script>
+
+
