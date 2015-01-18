@@ -1,5 +1,7 @@
 
 
+
+
 #filter_container {
     float: left;
     vertical-align: top;
@@ -15,10 +17,10 @@
 }
 
 .event_content {
+    clear: both;
     padding-top: 20px; 
     margin: 0px 0px 0px 0px;
     border-bottom: 1px solid #CCC;
-
 }
 
 .location_button { 
@@ -35,6 +37,12 @@
 
 }
 
+.location_button:hover{
+    color:#00E5FF;
+    background: white;
+    cursor: pointer;
+}
+
 .box {
     display: inline-block;
     vertical-align: top;
@@ -43,12 +51,25 @@
 .location_image {
         float: left;
         padding-right: 10px;
+        width: 100px;
+
+}
+
+#event_image_box {
+    padding: 0px;
+    margin: 0px;
+    width: 100px;
+    height:100px;
+    overflow: hidden;
+    color: red;
+    background-color: black;
+    border-radius: 10px;
 }
 
 .event_content img {
         margin-left: auto;
         margin-right: auto;
-        width: 90px;
+        width: 100px;
 }
 
 .time {
@@ -73,6 +94,8 @@
     margin-bottom: 3px;
 }
 
+
+
 /*
 .expandable {
     color: #999;
@@ -88,6 +111,8 @@ width: 75%;
 min-width: 100px;
 }
 
+
+
 .location a {
     font-weight: 300;
     color: #999;
@@ -98,3 +123,53 @@ min-width: 100px;
 	border-top: 1px solid #EBEBEB;
 }
 
+#filters {
+    color: gray;
+    display: inline;
+}
+
+#filters ul {
+    margin: 0px;
+    padding: 0px;
+    display: inline;
+}
+
+#filters li {
+    margin: 0px;
+    padding: 0px;
+    display: inline;
+    float:left;
+}
+#filters li {
+    margin: 0px;
+    padding: 0px;
+    padding-right: 16px;
+    display: inline;
+    float:left;
+    padding-bottom: 30px;
+}
+
+.days{
+    color:#167ac6;
+    background: white;
+    text-align: left;
+}
+
+.days:hover{
+    color:#00E5FF;
+    background: white;
+    cursor: pointer;
+}
+
+.button-clear{
+    padding-left: 10px;
+    padding-right: 10px;
+
+}
+
+.button-clear:hover {
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+
+}

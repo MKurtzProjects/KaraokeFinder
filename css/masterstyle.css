@@ -190,12 +190,8 @@ footer li {
 
 }
 
-.event_filters img {
-    float: left;
-    width: 180px;
-    margin-right: 20px;
-    padding-right: 10px;
-}
+
+
 
 .event_filters  img:hover {
     background-color: fuchsia;
@@ -250,16 +246,23 @@ footer li {
     .button-example-blue {
         background: #00BCD4;
     }
+    .button-example-white {
+ 
+    }
+
+        .button-example-white:hover {
+    cursor: pointer;
+    }
     .button-example-blue:hover {
         background: #4DD0E1;
     }
 
-#submit {
+#submit-button {
 float:left;
 display: inline-block;
 }
 
-#submit:hover {
+#submit-button:hover {
 
 }
 
@@ -299,7 +302,7 @@ margin: 0px;
 width: 20px;    
 }
 
-#submit {
+#submit-button {
     border-radius: 0px;
     background-color: white;
     float: left;
@@ -309,10 +312,11 @@ width: 20px;
 
 }
 
-#submit:hover {
+#submit-button:hover {
     border-right:4px solid #F8593E;
     cursor: pointer;
 
 }
+
 
 

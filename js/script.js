@@ -106,4 +106,10 @@ $('.ratings_stars').bind('click', function() {
     });
 
 
+//script for submitting multiple forms in home page
+    function doSubmit(id){
+    f = document.getElementById(id);
+    f.submit();
+    }
+
 

@@ -39,14 +39,14 @@
 
 <p id="city_select"> Now Serving Boston </p>    
 
-<form  action="home" method="get">
+<form  action="home" method=""  id="firstF">
 
 
-    <select id="select-gear" name="select" class="" placeholder="Find an event...">
+    <select id="select-gear" name="select" class="" placeholder="Find an event..."  onchange="this.form.submit()">
     <option value="">Find an Event...</option>
     <optgroup label="Events">
-    <option value="karaoke">Karaoke</option>
-    <option value="trivia">Trivia Night </option>
+    <option value="Karaoke">Karaoke</option>
+    <option value="Trivia">Trivia Night </option>
     </optgroup>
 
 
@@ -55,14 +55,14 @@
     $query1 = $this->db->query("SELECT * FROM event_info"); 
     ?>
     <?php foreach ($query1->result() as $row): ?>
-    <option value=<?php echo "'".$row->location_name."'"?>> <?php echo '<div id="list-item">'.$row->location_name.'</div>'  ?> </option>
+    <option type="hidden" value=<?php echo "'".$row->location_name."'"?>> <?php echo '<div id="list-item">'.$row->location_name.'</div>'?> </option>
 
 
     <?php endforeach ?>
     </optgroup>
 
   </select>
-    <button value="Submit" id="submit" alt="Submit"> <img src="/images/search_icon.png" alt="Search"> </button>
+    <button value="Submit" id="submit-button" alt="Submit"> <img src="/images/search_icon.png" alt="Search"> </button>
 </form>
 
 
@@ -74,12 +74,6 @@
                        
                     });
                     </script>
-
-
-
-
-
-
 
 </div>
     </div>

@@ -10,15 +10,22 @@ class Home extends CI_Controller {
 
   function index($page = 'home')
   { 
-    $word = "SELECT * FROM event_info WHERE event_type='karaoke' OR event_type='trivia'";
 
+    $filter = "SELECT * FROM event_info WHERE (event_type='karaoke' OR event_type='trivia')";
+
+    $data['select'] = "";
+//filter actions
  if (isset($_GET['select'])){
     $select = $_GET["select"];
-    $word = "SELECT * FROM event_info WHERE event_type LIKE '%".$select."%' OR location_name LIKE '%".$select."%'";
+    $filter = "SELECT * FROM event_info WHERE (event_type LIKE '%".$select."%' OR location_name LIKE '%".$select."%')";
+    $data['select'] = $select;
  }
 
-
-    $data['search_filter'] = $word;
+ if (isset($_GET['day'])) {
+  $day = $_GET["day"];
+  $filter = $filter."AND day_of_week ='".$day."'";
+ }
+    $data['search_filter'] = $filter;
 
 
     

@@ -23,7 +23,7 @@ class EventPage extends CI_Controller {
     $search_query = $this->db->query("SELECT * FROM event_info WHERE event_id = '".$event_id."'");
 
     if ($search_query->num_rows() == 0) {
-      die ("That event could not be found!");
+      die ("Sorry -- that event could not be found.");
     }
     else {
          $row = $search_query->row_array(); 
