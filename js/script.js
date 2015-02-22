@@ -112,4 +112,6 @@ $('.ratings_stars').bind('click', function() {
     f.submit();
     }
 
-
+                    $('#select-gear').selectize({
+                       
+                    });

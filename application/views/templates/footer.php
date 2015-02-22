@@ -5,7 +5,7 @@
 </div> 
 <footer>
 
-<ul>
+<ul class="list-inline foot">
 	<li class="directory"> Scoopda <strong>&copy; <?php echo date("Y")?> </strong> </li>
     <li class="directory"> <a href= "./about"> About </a> </li>
     <li class="directory"> <a href= "./about"> Contact </a> </li>
@@ -23,6 +23,9 @@
     <script src="/js/expander.js"></script>
     <script src="/js/ratings.js"></script>
     <script src="/js/script.js"></script>
+<!-- Latest compiled JavaScript -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
 
 </body>
 </html>

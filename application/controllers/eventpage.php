@@ -6,7 +6,7 @@ class EventPage extends CI_Controller {
   {
     parent::__construct();
     $this->load->model('events_model');
-    $this->load->library('jRating');
+    $this->load->model('venues_model');
   }
 
   function index($page = 'eventinfo')
@@ -20,7 +20,7 @@ class EventPage extends CI_Controller {
 
 
 
-    $search_query = $this->db->query("SELECT * FROM event_info WHERE event_id = '".$event_id."'");
+    $search_query = $this->db->query("SELECT * FROM events INNER JOIN venues ON events.venue_id=venues.venue_id WHERE event_id = '".$event_id."'");
 
     if ($search_query->num_rows() == 0) {
       die ("Sorry -- that event could not be found.");
@@ -28,7 +28,7 @@ class EventPage extends CI_Controller {
     else {
          $row = $search_query->row_array(); 
          $data['event_type'] = $row['event_type'];
-        $data['location_name'] = $row['location_name'];   
+        $data['location_name'] = $row['venue_name'];   
         $data['street'] = $row['street'];   
         $data['city'] = $row['city'];
         $data['state'] = $row['state'];
@@ -36,7 +36,7 @@ class EventPage extends CI_Controller {
         $data['website_url'] = $row['website_url'];        
         $data['description'] = $row['description'];
         $data['image'] = $row['image'];
-        $data['start_time'] = $row['start_time'];
+        $data['start_time'] = $row['upcoming_start'];
         $data['telephone'] = $row['telephone'];          
     }
 
@@ -53,14 +53,20 @@ class EventPage extends CI_Controller {
      
 
       $data['title'] = ucfirst($page); // Capitalize the first letter
-      $this->load->view('templates/header', $data);
+      $this->load->view('templates/prelogin_header', $data);
       $this->load->view('pages/'.$page, $data); 
       $this->load->view('templates/footer', $data);
     }
     else
     {
-      //If no session, redirect to login page
-      redirect('login', 'refresh');
+      $session_data = $this->session->userdata('logged_in');
+      $data['username'] = $session_data['username'];
+     
+
+      $data['title'] = ucfirst($page); // Capitalize the first letter
+      $this->load->view('templates/prelogin_header', $data);
+      $this->load->view('pages/'.$page, $data); 
+      $this->load->view('templates/footer', $data);
 	}
   }
   

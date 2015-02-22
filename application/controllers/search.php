@@ -6,6 +6,7 @@ class EventPage extends CI_Controller {
   {
     parent::__construct();
     $this->load->model('events_model');
+     $this->load->model('venues_model');   
     $this->load->controller('search');
   }
 

@@ -5,7 +5,10 @@
     <title><?php echo $title ?> - Scoopda</title>
 
     <meta charset="UTF-8">
-    <link href='http://fonts.googleapis.com/css?family=Noto+Sans' rel='stylesheet' type='text/css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Latest compiled and minified CSS 
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">-->
+        <link rel="stylesheet" href="/css/bootstrap.css">
     <link rel="stylesheet" href="/css/masterstyle.css">
         <link rel="stylesheet" href="/css/selectize.css">
                 <link rel="stylesheet" href="/css/selectize.default.css">
@@ -20,28 +23,33 @@
     <script src="/js/script.js"></script>
     <script src="/js/selectize.min.js"></script>    
 
-
-
 </head>
 
 <body>
-    <div id="site-header">
+    <div id="site-header" class="row">
+    <div class="col-sm-4">
     <header>
 
         <a href="/index.php/home"><img id="logo" src="/images/scoopdalogo.png" alt="Scoopda"> </a> 
-    <div id = "user_info">
-    <p>Welcome <?php echo $username; ?>!</p>
+</div>
+
+
+
+<div class="col-sm-4 col-sm-push-3"> 
+
+    <p class="text-muted"> Welcome <?php echo $username; ?>!</p>
     <a href="home/logout">Logout</a>
+
     </div>
 
 
-<div id="header_menu">
+<div class="col-sm-3 col-sm-pull-4" id="header_menu">
 
-<p id="city_select"> Now Serving Boston </p>    
+<p class="text-muted"> Now Serving <span class="text-info"> Boston </span> </p>    
 
+
+<div class="clearfix">
 <form  action="home" method=""  id="firstF">
-
-
     <select id="select-gear" name="select" class="" placeholder="Find an event..."  onchange="this.form.submit()">
     <option value="">Find an Event...</option>
     <optgroup label="Events">
@@ -62,25 +70,33 @@
     </optgroup>
 
   </select>
-    <button value="Submit" id="submit-button" alt="Submit"> <img src="/images/search_icon.png" alt="Search"> </button>
+    <button  value="Submit" id="submit-button" alt="Submit"> <img src="/images/search_icon.png" alt="Search"> </button>
 </form>
-
-
 </div>
 
-                    </div>
-                    <script class="show">
+
+
+
+
+                
+                    <script >
                     $('#select-gear').selectize({
                        
                     });
                     </script>
+                </div>
 
-</div>
+
+
+
+
     </div>
     </header>
 
 
 
 
-<div class="main-container">
+<div class="container">
+
+
 

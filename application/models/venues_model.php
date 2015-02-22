@@ -1,5 +1,5 @@
 <?php
-class Events_model extends CI_Model {
+class Venues_model extends CI_Model {
 
 	public function __construct()
 	{
@@ -12,11 +12,11 @@ public function get_events($slug = FALSE)
 {
 	if ($slug === FALSE)
 	{
-		$query = $this->db->get('events');
+		$query = $this->db->get('venues');
 		return $query->result_array();
 	}
 
-	$query = $this->db->get_where('events', array('slug' => $slug));
+	$query = $this->db->get_where('venues', array('slug' => $slug));
 	return $query->row_array();
 }
 

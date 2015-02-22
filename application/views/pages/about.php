@@ -1,17 +1,22 @@
+<div class="container">
+<h2>About</h2>
 
-<h1>The Scoop on Scoopda</h1>
+<br />
+<h3>What is Scoopda?</h3>
+<p>Scoopda helps users find the best local events and activities in town.</p>
+
+<p>Scoopda is currently in Beta. If you have thoughts or feedback, please get in touch.</p>
+    <form action="mailto:Mike@scoopda.com?Subject=Contact%20Scoopda">
+            <button type="submit" id="contact-button">
+                Contact 
+            </button>
+    </form>
 <hr />
 <br />
-<h2>For City Adventurers</h2>
-<h3>Discover Events Near You</h3>
-<p>Scoopda helps you find the best local events and activities in your neighborhoods.</p>
 
-<hr />
-<br />
-
-<h2> For Business Owners </h2>
-<h3> Get Found on Scoopda </h3>
-<p>Scoopda helps you get the word out on your event calendar. Email the Scoopda team with your calendar of events, and we'll add it do our site. </p>
+<h3> Are you a Business Owner? </h3>
+<h4> Get Found on Scoopda </h4>
+<p>Scoopda connects the community to your event calendar. Help potential customers find by adding Email the Scoopda team with your calendar of events, and we'll add it do our site. </p>
 
 
     <form action="mailto:Mike@scoopda.com?Subject=Contact%20Scoopda">
@@ -19,3 +24,4 @@
                 Contact 
             </button>
     </form>
+</div>
