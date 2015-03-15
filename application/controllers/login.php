@@ -16,24 +16,19 @@ class Login extends CI_Controller {
     error_reporting(E_ALL);
 ini_set('display_errors', 1);
 $this->db->_error_message();
-echo 'test';
   }
-
   function index($page = 'home')
   { 
-
     $filter = "SELECT * FROM events INNER JOIN venues ON events.venue_id=venues.venue_id WHERE (event_type='karaoke' OR event_type='trivia')";
     $data['select'] = "";
     $data['event_type'] = "";
   	$data['day'] = "";
 
-
-
 $query = $this->db->query("SELECT * FROM events INNER JOIN venues ON events.venue_id=venues.venue_id WHERE (event_type='karaoke' OR event_type='trivia')");
 
 
 
-echo 'Total Results: ' . $query->num_rows();
+//echo 'Total Results: ' . $query->num_rows();
 
 //filter actions
 
@@ -80,6 +75,8 @@ echo 'Total Results: ' . $query->num_rows();
       $this->load->view('pages/home', $data); 
       $this->load->view('templates/footer', $data);
 
+      $this->load->view('templates/footer', $data);
+
     }
     else
     {
@@ -90,7 +87,8 @@ echo 'Total Results: ' . $query->num_rows();
       $data['page'] = $page;
       $this->load->view('templates/prelogin_header', $data);
       $this->load->view('pages/home', $data); 
-      $this->load->view('templates/footer', $data);
+
+            $this->load->view('templates/footer', $data);
 	}
   }
   

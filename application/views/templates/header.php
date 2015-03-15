@@ -3,7 +3,7 @@
 <html>
 <head> 
     <title><?php echo $title ?> - Scoopda</title>
-
+<meta name="robots" content="noindex">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- Latest compiled and minified CSS 
@@ -22,6 +22,8 @@
     <script src="/js/ratings.js"></script>
     <script src="/js/script.js"></script>
     <script src="/js/selectize.min.js"></script>    
+
+
 
 </head>
 

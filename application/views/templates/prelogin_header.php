@@ -1,21 +1,29 @@
+<style>
+#add_event {margin-right: 10px;}
+</style> 
+
 
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Beta Login - Scoopda</title>
+    <title>Scoopda</title>
 <!-- Latest compiled and minified CSS -->
-<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
         <link rel="stylesheet" href="/css/selectize.css">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="/css/assets/css/bootstrap-responsive.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/css/masterstyle.css">
     <link rel="stylesheet" href="/css/login_view.css">
-        <link rel="stylesheet" href="/css/eventinfo.css">
+        <link rel="stylesheet" href="/css/bootstrap-datetimepicker.min.css">
+    <link rel="stylesheet" href="/css/login_view.css">
     <script src="/js/selectize.min.js"></script>    
-   
+    <script src="/js/bootstrap-datepicker.js"></script>
+<!--    <link href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.2.2/css/bootstrap-combined.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen"
+     href="http://tarruda.github.com/bootstrap-datetimepicker/assets/css/bootstrap-datetimepicker.min.css">
+-->
 </head>
 
     <body>
@@ -30,9 +38,8 @@
 </div>
     <div = "row">
     <div class="" >
-<a href= "/index.php/new_event"><div class="navbar-right"> <button id="add_event" type="button" class="btn btn-warning" href= "./new_event">  <style>
-#add_event a {color:white;}
-</style> Add Event  </button></a>
+<a href= "/index.php/new_event"><div class="navbar-right"> <button id="add_event" type="button" class="btn btn-warning" href= "./new_event">  
+Add Event  </button></a>
    <!--   <ul class="nav navbar-nav navbar-right">
         <li><button class="btn-link" data-toggle="" href="#searchbox" aria-expanded="false" aria-controls="collapseExample"><span class="glyphicon glyphicon-user" ></span> Sign up</button></li>
         <li><button class="btn-link" data-toggle="" href="#searchbox" aria-expanded="false" aria-controls="collapseExample"><span class="glyphicon glyphicon-log-in" ></span> Login</button></li>
@@ -77,11 +84,6 @@
 </div>
 </form>
 </div>
-
-
-
-
-
         
 </nav>
 

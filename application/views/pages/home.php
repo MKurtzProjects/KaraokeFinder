@@ -1,92 +1,54 @@
 
+<style>
+#filter{font-size:  20px;}
+</style>
 
-
-<div class="jumbotron row ">
-    <div class="col-sm-1">
+<div class="jumbotron row">
+    <div class="col-sm-2">
     </div>
 
-    <div class="row" id=''>
+    <div class= "col-sm-9">
+        <h1> Scoopda
+            <?php 
+                if (isset($_GET['select'])) {
+                echo ": ".$_GET["select"]; }
+            ?>
+        </h1>          
+        <h3 class = 'lead'> Your guide to nightly pub events: Boston.</h3>
+        <form action="/" method="get" id="">
+            <div class="btn-group btn-group-lg" role="group" aria-label="...">
+                <button type="submit"  name="select" value="Trivia" class="btn btn-default"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> Trivia Nights</button>
+                <button type="submit" name="select" value="Karaoke" class="btn btn-default"><span class="glyphicon glyphicon-music" aria-hidden="true"></span> Karaoke Nights</button>
 
+                <!--    <div class="btn-group btn-group-lg" role="group">
+                   <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                      Dancing
+                      <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                      <li><a href="#">Disco Night</a></li>        
+                      <li><a href="#">80s Night</a></li>
 
- <div class= "col-sm-1">
-</div>
-
-
-
-
-
- <div id='find-form' class= "col-sm-5 ">
-  <h1> Scoopda: Boston </h1> <style> #small {color:white;} </style>
-  <h3 class = 'lead'> Your guide to nightly pub events.</h3>
-
-
-
-<form action="/" method="get" id="">
-<div class="btn-group btn-group-lg" role="group" aria-label="...">
-  <button type="submit"  name="select" value="Trivia" class="btn btn-default"><span class="glyphicon glyphicon-book" aria-hidden="true"></span> Trivia Nights</button>
-  <button type="submit" name="select" value="Karaoke" class="btn btn-default"><span class="glyphicon glyphicon-music" aria-hidden="true"></span> Karaoke Nights</button>
-
-<!--   <div class="btn-group btn-group-lg" role="group">
-    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-      Dancing
-      <span class="caret"></span>
-    </button>
-    <ul class="dropdown-menu" role="menu">
-      <li><a href="#">Disco Night</a></li>        
-      <li><a href="#">80s Night</a></li>
-
-    </ul>
-  </div>
-   <div class="btn-group btn-group-lg" role="group">
-    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-      Live Music
-      <span class="caret"></span>
-    </button>
-    <ul class="dropdown-menu" role="menu">
-      <li><a href="#">Bluegrass</a></li>
-      <li><a href="#">Folk</a></li>        
-      <li><a href="#">Rock</a></li>
-      <li><a href="#">Jazz</a></li>
-    </ul>
-  </div> -->
-</div>
-</form>
-
-
-
-
-
-<!--
-<nav>
-  <ul class="pagination pagination-lg">
-   <li class="active"><a href="/?select=Trivia#"><span class="glyphicon glyphicon-book" aria-hidden="true"> Trivia <span class="sr-only">(current)</span></a></li>
-    <li><a href="/?select=Karaoke#"><span class="glyphicon glyphicon-music" aria-hidden="true"> Karaoke </a></li>
-    <li><a href="/">All</a></li>
-  </ul>
-</nav>
--->
-
-
-</div>
-
+                    </ul>
+                  </div>
+                   <div class="btn-group btn-group-lg" role="group">
+                    <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                      Live Music
+                      <span class="caret"></span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                      <li><a href="#">Bluegrass</a></li>
+                      <li><a href="#">Folk</a></li>        
+                      <li><a href="#">Rock</a></li>
+                      <li><a href="#">Jazz</a></li>
+                    </ul>
+                  </div>
+                -->
+            </div>
+        </form>
+    </div>
 </div>
 <!--
-    <div class="row">
-        <div class="col-sm-6">
-
-
-            <h2> Welcome to Scoopda </h2>
-            <p class="lead"> Scoopda helps you discover the best events in town - from the craziest karaoke to the tastiest Brunch spot - any day of the week.  </p>
-
-            <form action="mailto:Mike@scoopda.com?Subject=Contact%20Scoopda">
-                <button class="btn btn-default" type="submit" id="">
-                    Contact 
-                </button>
-            </form>
-        </div>
-
-        <div class="col-sm-4">
-
        <h2>Beta Access Login</h2>
        <div class="form-group">
           <span class="text-warning"> <?php /// echo validation_errors(); ?> </span>
@@ -108,31 +70,16 @@
 </div>
 -->
 
-
 </div>
 <div class="container">
-        <div class="row">
-        <div class = "">
-
-
-
-
-
-
-
-
     <div id="" class="col-sm-3"> 
-
         <h3 class='text-muted'> Add Filter </h3>
-
-
         <ul class="nav nav-pills nav-stacked nav-justified">
-
-                <form action="" method="" id="" >
-  <li class="dropdown">
-    <a class="dropdown-toggle" data-toggle="dropdown" href="#"> Day
-    <span class="caret"></span></a>
-    <ul role="menu" class="dropdown-menu">
+            <form action="" method="" id="" >
+                <li class="dropdown">
+                    <a class="dropdown-toggle lg" data-toggle="dropdown" href="#" id="filter">  Day 
+                    <span class="caret"></span></a>
+                    <ul role="menu" class="dropdown-menu">
                         <input type="hidden" name="select" value="<?php echo htmlspecialchars($select, ENT_QUOTES); ?>" />
 
                         <li> <button type="submit" name = "day" value = "Sunday" class= "btn-link" id=""> Sundays </button> </li>
@@ -142,8 +89,8 @@
                         <li> <button type="submit" name = "day" value = "Thursday" class= "btn-link" id="">  Thursdays </button> </li>
                         <li> <button type="submit" name = "day" value = "Friday" class= "btn-link" id="">  Fridays </button> </li>
                         <li> <button type="submit" name = "day" value = "Saturday" class= "btn-link" id="">  Saturdays </button> </li>   
-    </ul>
-  </li>
+                    </ul>
+                </li>
 
 
 <!--  <li class="dropdown">
@@ -158,7 +105,7 @@
 
         </ul>
     </li>  -->
-             </form>
+            </form>
 </ul>
     </div>
     <div id="" class="list-unstyled col-sm-9"> 
@@ -267,8 +214,6 @@
 </div>        
 </div>
 
-
-<!--<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-54e8a97e294146d4" async="async"></script>
 
 
  </body>
