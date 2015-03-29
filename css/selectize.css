@@ -128,7 +128,7 @@
   display: inline-block;
 }
 .selectize-input {
-  width: 300px;
+  width: 100%;
   border: 1px solid #d0d0d0;
   padding: 8px 8px;
   display: inline-block;

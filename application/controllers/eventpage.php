@@ -26,8 +26,8 @@ class EventPage extends CI_Controller {
       die ("Sorry -- that event could not be found.");
     }
     else {
-         $row = $search_query->row_array(); 
-         $data['event_type'] = $row['event_type'];
+        $row = $search_query->row_array(); 
+        $data['event_type'] = $row['event_type'];
         $data['location_name'] = $row['venue_name'];   
         $data['street'] = $row['street'];   
         $data['city'] = $row['city'];
@@ -62,7 +62,7 @@ class EventPage extends CI_Controller {
       $session_data = $this->session->userdata('logged_in');
       $data['username'] = $session_data['username'];
      
-
+echo 'asdofi';
       $data['title'] = ucfirst($page); // Capitalize the first letter
       $this->load->view('templates/prelogin_header', $data);
       $this->load->view('pages/'.$page, $data); 

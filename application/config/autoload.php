@@ -38,7 +38,7 @@
 */
 
 $autoload['packages'] = array(APPPATH.'third_party');
-
+$autoload['helper'] = array('url','text','form');
 
 /*
 | -------------------------------------------------------------------
@@ -65,7 +65,7 @@ $autoload['libraries'] = array('database','session');
 */
 
 $autoload['helper'] = array('url');
-
+$autoload['helper'] = array('form');
 
 /*
 | -------------------------------------------------------------------
@@ -80,7 +80,7 @@ $autoload['helper'] = array('url');
 |
 */
 
-$autoload['config'] = array();
+$autoload['config'] = array('');
 
 
 /*

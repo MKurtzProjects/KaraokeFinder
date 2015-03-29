@@ -6,7 +6,7 @@
 <meta name="robots" content="noindex">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-<!-- Latest compiled and minified CSS 
+
 <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">-->
         <link rel="stylesheet" href="/css/bootstrap.css">
     <link rel="stylesheet" href="/css/masterstyle.css">
@@ -15,13 +15,14 @@
     <link rel="stylesheet" href=<?php echo '"/css/'.$page.'.css"' ?> >
     <script src="/js/jquery.js"></script>
     <script type="text/javascript" src="/js/jRating.jquery.js"></script>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-    <script src="/js/jquery-1.11.2.min.js"></script>         
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>        
     <script src="/js/jquery-ui.js"></script>
     <script src="/js/expander.js"></script>
-    <script src="/js/ratings.js"></script>
+
     <script src="/js/script.js"></script>
     <script src="/js/selectize.min.js"></script>    
+        <script src="/js/bootstrap.min.js"></script>   
+
 
 
 

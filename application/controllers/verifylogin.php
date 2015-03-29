@@ -1,17 +1,16 @@
-<?php // if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+<?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-//class VerifyLogin extends CI_Controller {
+class VerifyLogin extends CI_Controller {
 
-//  function __construct()
-//  {
-//    parent::__construct();
-//    $this->load->model('user','',TRUE);
- // }
+  function __construct()
+  {
+    parent::__construct();
+    $this->load->model('user','',TRUE);
+  }
 
-//  function index($page = 'login_view')
-/* {
-    $data['title'] = ucfirst($page); // Capitalize the first letter
-    //This method will have the credentials validation
+  function index()
+ {
+  //This method will have the credentials validation
     $this->load->library('form_validation');
 
     $this->form_validation->set_rules('username', 'Username', 'trim|required|xss_clean');
@@ -20,20 +19,17 @@
     if($this->form_validation->run() == FALSE)
     {
       //Field validation failed.  User redirected to login page
-  
-  $this->load->view('templates/prelogin_header');
-  $this->load->view('login_view');
-   $this->load->helper(array('form'));
-  $this->load->view('templates/footer'); 
-
-
-
+      $this->load->view('templates/prelogin_header');
+      $this->load->view('templates/login_view');
+          $this->load->view('templates/footer');
 
     }
     else
     {
       //Go to private area
-      redirect('home', 'refresh');
+      $this->load->view('templates/prelogin_header');
+      $this->load->view('pages/new_event');
+        $this->load->view('templates/footer');
     }
     
   }
