@@ -106,7 +106,7 @@ $(document).ready(function(){
 
 <div class='col-sm-2'>
 </div>
-<style> #description {padding-bottom: 20px;} #map {width: 100%;} #centered {text-align: center;  margin-bottom: 100px; margin-top: 100px; background-color: #00838F; color:white; padding: 10px; margin-bottom: 10px;}</style>
+<style> #description {padding-bottom: 20px;} #map {width: 100%;} #centered {text-align: center; margin-top: 100px; background-color: ; color:#00838F; padding: 10px; margin-bottom:30px;}</style>
 
 
 

@@ -37,31 +37,17 @@
 <nav class="navbar navbar-fixed-top">
       <div class="navbar-inner">
     <div class="container-fluid">
-    <div class="navbar-header">
-      <a class="navbar-brand " href="/"><img id="logo" src="/images/scoopdalogo.jpg" alt="Scoopda"> </a>
-</div>
-
- 
+    <div class="">
+    <a class="navbar-brand hidden-xs" href="/"><img id="logo" src="/images/scoopdalogo.jpg" alt="Scoopda"> </a>
+    <a class="navbar-brand hidden-lg hidden-md hidden-sm col-xs-4" href="/"><img id="logo" src="/images/smallscoopdalogo.png" alt="Scoopda"> </a>
 
 
-<div>
-<a href= "/index.php/new_event"><div class="navbar-right hidden-sm hidden-xs"> <button id="add_event" type="button" class="btn btn-warning " href= "./new_event">  
-Add Event  </button></a>
-   <!--   <ul class="nav navbar-nav navbar-right">
-        <li><button class="btn-link" data-toggle="" href="#searchbox" aria-expanded="false" aria-controls="collapseExample"><span class="glyphicon glyphicon-user" ></span> Sign up</button></li>
-        <li><button class="btn-link" data-toggle="" href="#searchbox" aria-expanded="false" aria-controls="collapseExample"><span class="glyphicon glyphicon-log-in" ></span> Login</button></li>
-
-       
-      </ul> -->
 
 
-</div> 
-    <button value="Submit" class="btn-link hidden-sm hidden-xs navbar-right" id="submit-button" alt="Submit"> <img src="/images/search_icon.png" alt="Search"> </button>
 
-<div class="" id='search_bar'>
-<form  action="" class = "navbar-right col-lg-4 col-sm-3" method=""  id="firstF">
+<form  action="" class = "navbar-right col-lg-6 col-md-5 col-sm-6 col-xs-8" method=""  id="firstF">
     <div id="input" class="">
-    <select id="select-gear" name="select" class="" placeholder="Find an event..."  onchange="this.form.submit()">
+    <select id="select-gear" name="select" class="" placeholder="Find trivia & karaoke events"  onchange="this.form.submit()">
     <option value="">Find an Event...</option>
     <optgroup label="Events">
     <option value="Karaoke"></span></span>Karaoke Nights</option>
@@ -88,7 +74,7 @@ Add Event  </button></a>
                     });
                     </script>
 </div>
-</div>
+
 </form>
 <?php if($this->session->userdata('logged_in'))
    {
@@ -96,7 +82,12 @@ Add Event  </button></a>
    }    
 ?> 
 </div>
-
+<div class="navbar-right hidden-sm hidden-xs">
+<a href= "/index.php/new_event">
+<button id="add_event" type="button" class="btn btn-warning " href= "./new_event">  
+Add Event  </button>
+</a>
+</div>
   
 </nav>
 

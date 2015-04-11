@@ -2,6 +2,7 @@
 <style>
 #filter{font-size:  20px;} #cityselect{width: 100%;}
  .repeat{color:#009933}
+ .img-thumbnail{min-height: 100px; min-width: 100px;}
 </style>
 
 <!-- Google analytics tracking -->
@@ -16,9 +17,15 @@
 
 </script>
 
+<?php 
+$test=" ";
+if (isset($_GET['select'])){
+    $test = 'collapse';
+}
+echo "<div class='jumbotron row ".$test." hidden-xs'>";
+?>
 
 
-<div class="jumbotron row">
     <div class="col-sm-2">
     </div>
 
@@ -95,6 +102,16 @@
         </form>
     </div>
 </div>
+<div class="hidden-lg hidden-md">
+<br><br>
+</div>
+<?php 
+if (isset($_GET['select'])){
+    echo "";
+}
+
+?>
+
 
 <!--
        <h2>Beta Access Login</h2>
@@ -125,15 +142,16 @@
     <br>
 <br>
 <!-- Mobile Medu -->
-<div class="panel panel-default hidden-lg hidden-md" >
-    <a class="" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
- 
-  <div class="panel-heading">
 
-    </span><h3 class="panel-title">Add Filter <span class="glyphicon glyphicon-menu-down" aria-hidden="true"></h3>
-  </a>
+
+    <a class="" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+    </span><h3 class="panel-title hidden-lg hidden-md hidden-sm"> <span class="glyphicon glyphicon glyphicon-filter" aria-hidden="true"></span> Refine </h3>
+    </a>
+
+  <div class="collapse panel panel-default hidden-lg hidden-md" id="collapseExample">
+  <div class="panel-headireng">
   </div>
-<form class= "collapse" id="collapseExample" action="#" method="GET" id="" >   
+  <form class= "" id="" action="#" method="GET" id="" >   
     <ul class="list-group"  >
         <li class="list-group-item">
             <div class="container-fluid" id="">
@@ -141,7 +159,10 @@
                 <option value="" disabled selected>City</option>
   
                 <option value="Boston">Boston</option>
+                <option value="Boston">Cambridge</option>
+                <option value="Somerville">Jamaica Plain</option>
                 <option value="Somerville">Somerville</option>
+
             </select>  
         </div>
 
@@ -198,7 +219,9 @@
 
    <!-- Web MENU -->
 
-<div class="panel panel-default hidden-sm hidden-xs" >
+
+
+<div class="panel panel-default hidden-xs" >
 
   <div class="panel-heading">
 
@@ -321,16 +344,11 @@
 
                     <li class="event_content list-unstyled"> 
                         <div class="row" id="card">
-                            <div class="col-sm-9 list-inline">
-                                <h3>      
-                                <form action="index.php/eventpage" method="GET">
-                                <span class=''> </span> <button class='btn-link card-header' name="event_id" type="submit" value=<?php echo "'".$row->event_id."'"; ?>><?php echo $row->event_type; ?> at  
-                                <?php echo $row->venue_name; ?> </button>
-                                </form>   
-                                </h3>
+                            <div class="col-sm-12 list-inline">
+
                         <div>
-                        <div class="containter">
-                            <div class="col-lg-3 col-xs-5 list-inline">
+                        <div>
+                            <div class="col-lg-3 col-xs-4 col-sm-3 col-md-3  list-inline">
 
                                     <img class="img-thumbnail" src=<?php 
                                     
@@ -342,36 +360,40 @@
                                         echo "'/images/beer.png'"; }
                                     ?> alt=Image>
                             </div>
-                        
 
-                            <div class="col-lg-4">
-
-                                    <p class='text-danger lead'> <!--<span class="glyphicon glyphicon-calendar"></span>--> <?php $d=strtotime($row->upcoming_start);
-                                        echo date("l", $d). "<br>".date("M d", $d)." ".date("g:iA", $d);
-                                    ?> <p/>
-                      
-                                        <p><span class="repeat"> Repeats: Weekly</p></span>
+                            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-8">
+                                <h4>      
+                                <form action="index.php/eventpage" method="GET">
+                                <span class=''> </span> <button class='btn-link text-left' name="event_id" type="submit" value=<?php echo "'".$row->event_id."'"; ?>><?php echo $row->event_type; ?> at  
+                                <?php echo $row->venue_name; ?> </button>
+                                </form>   
+                                </h4>
+                            </div>
+                            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-8">
+                                
+                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-5">
+                                    <p> <span class='text-danger lead'> <!--<span class="glyphicon glyphicon-calendar"></span>--> <?php $d=strtotime($row->upcoming_start);
+                                        //Below echos the date as well as day
+                                        //echo date("l", $d). "<br>".date("M d", $d)." ".date("g:iA", $d);
+                                    echo date("l", $d). " ".date("g:iA", $d);
+                                    ?> </span>
+                                        <br>
+                                        <span class="repeat"> Repeats: Weekly</p></span>
+                                    
                             </div>
 
-              
-                                <div class="col-lg-4 text-muted center-block"> 
 
-                            <p> <!--<span class="glyphicon glyphicon-road"></span>--><?php echo $row->street."<br /> ".$row->city.", ".$row->state." ".$row->zip ?>
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-muted"> 
+
+                             <img class="pull-left hidden-xs" src="/images/location.png"> <p class="pull-left block"><?php echo $row->street.", ".$row->city?>
                             </p> 
 
-                                </div>
-
-                                              <div class="col-lg-3">
-
-                            </div>          
+                    </div>
 
 
 
                 
 
-                    <div class="location_image">
-
-                    </div>
                     </div>
                     <div class="break"></div>
 
