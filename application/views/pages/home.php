@@ -2,7 +2,10 @@
 <style>
 #filter{font-size:  20px;} #cityselect{width: 100%;}
  .repeat{color:#009933}
- .img-thumbnail{min-height: 100px; min-width: 100px;}
+/* .img-thumbnail{min-height: 100px; min-width: 100px;} */
+  #card_title h4 {padding-top:0px; margin-top: 0px}
+  #title_box {max-height: 60px;}
+  #venue_name {padding: 0px;}
 </style>
 
 <!-- Google analytics tracking -->
@@ -20,7 +23,7 @@
 <?php 
 $test=" ";
 if (isset($_GET['select'])){
-    $test = 'collapse';
+    $test = 'collapse'; echo "<br><br><br>";
 }
 echo "<div class='jumbotron row ".$test." hidden-xs'>";
 ?>
@@ -159,8 +162,8 @@ if (isset($_GET['select'])){
                 <option value="" disabled selected>City</option>
   
                 <option value="Boston">Boston</option>
-                <option value="Boston">Cambridge</option>
-                <option value="Somerville">Jamaica Plain</option>
+                <option value="Cambridge">Cambridge</option>
+                <option value="Jamaica Plan">Jamaica Plain</option>
                 <option value="Somerville">Somerville</option>
 
             </select>  
@@ -236,6 +239,8 @@ if (isset($_GET['select'])){
                 <option value="" disabled selected>City</option>
   
                 <option value="Boston">Boston</option>
+                <option value="Cambridge">Cambridge</option>
+                <option value="Jamaica Plan">Jamaica Plain</option>
                 <option value="Somerville">Somerville</option>
             </select>  
         </div>
@@ -341,56 +346,54 @@ if (isset($_GET['select'])){
      
             <?php foreach ($query1->result() as $row): ?>
 
-
+                    
                     <li class="event_content list-unstyled"> 
                         <div class="row" id="card">
-                            <div class="col-sm-12 list-inline">
+                        <div class="col-lg-12">
+                            <h4 id=''>      
+                                <form action="index.php/eventpage" method="GET">
+                                <span class=''> </span> <button class='btn-link text-left' id='venue_name' name="event_id" type="submit" value=<?php echo "'".$row->event_id."'"; ?>><?php echo $row->event_type; ?> at  
+                                <?php echo $row->venue_name; ?> </button>
+                                </form>   
+                                </h4>
+                        </div>
 
-                        <div>
-                        <div>
+
                             <div class="col-lg-3 col-xs-4 col-sm-3 col-md-3  list-inline">
 
                                     <img class="img-thumbnail" src=<?php 
                                     
-                                    if (isset($row->image))
+                                    if ($row->image == 'images/')
                                     {
-                                        echo '"'.$row->image.'"';
+                                        echo "'/images/yellowback.jpg'";;
                                     }
                                     else {
-                                        echo "'/images/beer.png'"; }
+                                        echo $row->image; }
                                     ?> alt=Image>
                             </div>
+                            <div class="col-lg-9 col-xs-8 col-sm-9 col-md-9  list-inline">
 
-                            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-8">
-                                <h4>      
-                                <form action="index.php/eventpage" method="GET">
-                                <span class=''> </span> <button class='btn-link text-left' name="event_id" type="submit" value=<?php echo "'".$row->event_id."'"; ?>><?php echo $row->event_type; ?> at  
-                                <?php echo $row->venue_name; ?> </button>
-                                </form>   
-                                </h4>
-                            </div>
-                            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-8">
+                     
                                 
-                            <div class="col-lg-4 col-md-4 col-sm-4 col-xs-5">
-                                    <p> <span class='text-danger lead'> <!--<span class="glyphicon glyphicon-calendar"></span>--> <?php $d=strtotime($row->upcoming_start);
+                            <div class="row">
+                                    <p> <span class='text-danger'> <!--<span class="glyphicon glyphicon-calendar"></span>--> <?php $d=strtotime($row->upcoming_start);
                                         //Below echos the date as well as day
                                         //echo date("l", $d). "<br>".date("M d", $d)." ".date("g:iA", $d);
                                     echo date("l", $d). " ".date("g:iA", $d);
                                     ?> </span>
                                         <br>
-                                        <span class="repeat"> Repeats: Weekly</p></span>
-                                    
-                            </div>
+                                        <span class="repeat"> Repeats: Weekly</p></span>     
+                          
 
 
-                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4 text-muted"> 
+                                <div class="text-muted"> 
 
                              <img class="pull-left hidden-xs" src="/images/location.png"> <p class="pull-left block"><?php echo $row->street.", ".$row->city?>
                             </p> 
 
-                    </div>
+              
 
-
+  </div>
 
                 
 
@@ -399,11 +402,12 @@ if (isset($_GET['select'])){
 
             <?php endforeach ?>
 
+
+</li>
         </ol>
 
 </div>
-</div>        
-</div>
+
 
 
 

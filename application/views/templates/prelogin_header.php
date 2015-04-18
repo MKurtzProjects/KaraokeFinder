@@ -15,7 +15,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
-  
+  <link rel="icon" href="/images/favicon.png" type="image/png" sizes="16x16">
 
       <link rel="stylesheet" href="/css/selectize.css">
 
@@ -47,7 +47,7 @@
 
 <form  action="" class = "navbar-right col-lg-6 col-md-5 col-sm-6 col-xs-8" method=""  id="firstF">
     <div id="input" class="">
-    <select id="select-gear" name="select" class="" placeholder="Find trivia & karaoke events"  onchange="this.form.submit()">
+    <select id="select-gear" name="select" class="" placeholder="Trivia & karaoke events"  onchange="this.form.submit()">
     <option value="">Find an Event...</option>
     <optgroup label="Events">
     <option value="Karaoke"></span></span>Karaoke Nights</option>

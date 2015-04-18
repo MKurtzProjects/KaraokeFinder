@@ -42,7 +42,15 @@
 </div> 
 
 <div id="" class="col-sm-4 col-md-4  img-thumbnail"> <style> h4 {text-align: center;} #event_image {width: 100%; max-width: 350px;} #description {width:100%; max-width: 350px; padding-left: 14px; padding-right: 5px;} </style>
-  <img id="event_image" src=<?php echo "'".$image."'" ?>>
+  <img id="event_image" src=<?php 
+                                    
+                                    if ($image == 'images/')
+                                    {
+                                        echo "'/images/yellowback.jpg'";;
+                                    }
+                                    else {
+                                        echo $image; }
+                                    ?> alt=Image>>
   <div class='row'>
     <div class="col-sm-12"  id ='description'>
     <h4> Description </h4>
@@ -106,7 +114,7 @@ $(document).ready(function(){
 
 <div class='col-sm-2'>
 </div>
-<style> #description {padding-bottom: 20px;} #map {width: 100%;} #centered {text-align: center; margin-top: 100px; background-color: ; color:#00838F; padding: 10px; margin-bottom:30px;}</style>
+<style> #description {padding-bottom: 20px;} #map {width: 100%;} #centered {text-align: center; margin-top: 100px; background-color: ; color:#00838F; padding: 10px; margin-bottom:15px;}</style>
 
 
 
